@@ -1,0 +1,1622 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NHL Season Picks 2026–27 • Final Edition</title>
+<style>
+:root{
+  --bg:#07111f;--panel:#0d1b2d;--panel2:#11243a;--text:#f5f8fc;--muted:#9eb0c5;
+  --line:#223851;--accent:#38bdf8;--accent2:#f43f5e;--gold:#fbbf24;--good:#34d399;
+  --shadow:0 18px 50px rgba(0,0,0,.28);--radius:20px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:
+radial-gradient(circle at 10% 0%,rgba(56,189,248,.13),transparent 32rem),
+radial-gradient(circle at 90% 15%,rgba(244,63,94,.10),transparent 30rem),var(--bg);
+color:var(--text);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+a{color:inherit}.wrap{max-width:1050px;margin:auto;padding:24px 18px 70px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.5px}
+.logo{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+background:linear-gradient(145deg,var(--accent),#2563eb);box-shadow:0 8px 24px rgba(56,189,248,.25);font-size:23px}
+.mode{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);border-radius:999px;padding:9px 13px}
+.hero{border:1px solid var(--line);border-radius:28px;padding:30px;background:
+linear-gradient(135deg,rgba(56,189,248,.12),rgba(244,63,94,.08)),var(--panel);
+box-shadow:var(--shadow);overflow:hidden;position:relative}
+.hero:after{content:"🏒";position:absolute;right:5%;bottom:-20px;font-size:120px;opacity:.07;transform:rotate(-20deg)}
+.kicker{color:var(--accent);font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1.7px}
+h1{font-size:clamp(38px,7vw,72px);line-height:.95;margin:10px 0 14px;letter-spacing:-2.5px}
+.hero p{max-width:700px;color:var(--muted);font-size:18px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.pill{padding:8px 12px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;font-weight:800;font-size:13px}
+.progress{position:sticky;top:0;z-index:20;margin:18px 0;padding:10px 0;background:rgba(7,17,31,.86);backdrop-filter:blur(14px)}
+.progline{height:8px;border-radius:99px;background:#14263c;overflow:hidden}.progline i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#60a5fa,var(--accent2));transition:.3s}
+.progmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:5px;font-weight:800}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:rgba(13,27,45,.94);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin:18px 0;box-shadow:var(--shadow)}
+.card h2{margin:0 0 5px;font-size:25px}.desc{color:var(--muted);margin:0 0 18px}.points{float:right;color:var(--gold);font-size:13px}
+label{display:block;font-weight:800;margin:15px 0 7px}input,select,textarea{width:100%;background:#081625;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px 13px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(56,189,248,.13)}
+textarea{min-height:100px;resize:vertical}
+.teamgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.teamgrid button,.choice{
+border:1px solid var(--line);background:#0a1727;color:var(--text);border-radius:12px;padding:11px 8px;font-weight:800;min-height:46px;transition:.15s}
+.teamgrid button:hover,.choice:hover{transform:translateY(-1px);border-color:#41627f}.teamgrid button.selected,.choice.selected{background:linear-gradient(135deg,#155e87,#1e3a8a);border-color:var(--accent);box-shadow:0 0 0 2px rgba(56,189,248,.15)}
+.teamgrid button:disabled{opacity:.35;cursor:not-allowed}.sectionhead{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.counter{color:var(--muted);font-size:13px}.counter.done{color:var(--good)}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.choices button{text-align:left}
+.meter{height:10px;background:#071322;border-radius:99px;overflow:hidden;margin:8px 0}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--good));transition:.3s}
+.budget{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:13px;background:#091828;margin:14px 0;font-weight:900}.budget strong{font-size:20px;color:var(--gold)}
+.playergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.playergrid button{min-height:67px;border:1px solid var(--line);background:#091828;color:var(--text);border-radius:12px;padding:8px;font-weight:800}.playergrid small{display:block;color:var(--muted);font-weight:700}.playergrid button.selected{border-color:var(--gold);background:#2b2108;box-shadow:0 0 0 2px rgba(251,191,36,.12)}
+.rowlabel{color:var(--accent);font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-top:20px}
+.radio2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.radio2 button{border:1px solid var(--line);background:#091828;color:var(--text);border-radius:12px;padding:12px;font-weight:900}.radio2 button.selected{background:var(--accent);color:#032235;border-color:var(--accent)}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:13px;padding:13px 17px;font-weight:900;color:#031522;background:var(--accent);box-shadow:0 8px 24px rgba(56,189,248,.16)}.btn.secondary{background:#172a40;color:var(--text);border:1px solid var(--line);box-shadow:none}.btn.danger{background:var(--accent2);color:white}
+.notice{border-left:4px solid var(--gold);background:rgba(251,191,36,.07);padding:12px 14px;color:#d9e2ee;border-radius:0 12px 12px 0}
+.quizbox{border:1px solid var(--line);border-radius:16px;padding:17px;background:#091828}.timer{height:7px;background:#14263c;border-radius:99px;overflow:hidden}.timer i{display:block;height:100%;width:100%;background:var(--accent2);transition:width linear}
+.quizopt{display:grid;gap:8px;margin-top:14px}.quizopt button{border:1px solid var(--line);background:#0b1a2c;color:var(--text);padding:13px;border-radius:12px;text-align:left;font-weight:800}.quizopt button.correct{background:#064e3b;border-color:var(--good)}.quizopt button.wrong{background:#701a2a;border-color:var(--accent2)}
+.result{display:none;border-color:rgba(52,211,153,.35);background:linear-gradient(145deg,rgba(52,211,153,.08),rgba(56,189,248,.06)),var(--panel)}
+.scorebig{font-size:56px;font-weight:950;line-height:1;color:var(--good)}.cardpick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.mini{border:1px solid var(--line);border-radius:14px;padding:13px;background:#091828}.mini b{display:block}.leader{display:grid;gap:8px}.leaderrow{display:flex;justify-content:space-between;padding:11px 13px;border:1px solid var(--line);border-radius:12px;background:#091828}.muted{color:var(--muted)}.error{color:#fb7185;font-weight:800;min-height:24px}.footer{text-align:center;color:var(--muted);font-size:13px;margin-top:28px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}.teamgrid{grid-template-columns:repeat(3,1fr)}.playergrid{grid-template-columns:repeat(2,1fr)}.cardpick{grid-template-columns:1fr}.hero{padding:23px}.topbar{align-items:flex-start}.brand span{display:none}}
+@media(max-width:470px){.teamgrid{grid-template-columns:repeat(2,1fr)}.choices{grid-template-columns:1fr}.wrap{padding-left:12px;padding-right:12px}.card{padding:16px}h1{font-size:43px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="private-access-gate" id="privateAccessGate" role="dialog" aria-modal="true" aria-labelledby="accessTitle">
+  <div class="private-access-card">
+    <div class="private-access-logo">🏒</div>
+    <div class="kicker">2026–27 NHL PICK 'EM</div>
+    <h1 id="accessTitle">PRIVATE<br>LOCKER ROOM.</h1>
+    <p>Enter the invite code from the league organizer to reach the Drop the Puck screen.</p>
+    <form id="privateAccessForm" autocomplete="off">
+      <label for="privateAccessCode">League invite code</label>
+      <input id="privateAccessCode" name="privateAccessCode" type="password" placeholder="Enter the code" maxlength="32" autocomplete="off" required aria-describedby="privateAccessMessage">
+      <button class="private-access-submit" type="submit">🔓 UNLOCK THE ARENA</button>
+      <div id="privateAccessMessage" class="private-access-message" role="status" aria-live="polite">Only people with the invite code should continue.</div>
+    </form>
+    <div class="private-access-foot">Keep the code in your group chat—not in public posts.</div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><div class="logo">🏒</div><span>NHL PICK 'EM</span></div>
+    <button class="mode" id="themeBtn">☾ Theme</button>
+  </div>
+
+  <header class="hero">
+    <div class="kicker">2026–27 Season</div>
+    <h1>Build your NHL season.</h1>
+    <p>Make your playoff picks, spend your fantasy budget, predict the big moments, and see how your hockey brain stacks up.</p>
+    <div class="stats"><span class="pill">🏆 FINAL EDITION</span><span class="pill">12 playoff picks</span><span class="pill">100 fantasy coins</span><span class="pill">7 trivia questions</span><span class="pill">Instant results</span></div>
+  </header>
+
+  <div class="progress">
+    <div class="progline"><i id="progressBar"></i></div>
+    <div class="progmeta"><span id="progressText">0% complete</span><span id="progressHint">Start with your name</span></div>
+  </div>
+
+  
+
+<section class="card">
+    <div class="sectionhead"><h2>Live leaderboard</h2><span class="muted">Shared with everyone</span></div>
+    <p class="desc">Overall points combine prediction accuracy, Fantasy and trivia. Before real player stats are entered, Fantasy uses clearly labelled preseason projections.</p>
+    <div class="leader" id="leaderboard"></div>
+  </section>
+
+  <section class="card" id="identity">
+    <div class="sectionhead"><h2>1. Who's making the picks?</h2><span class="points">Required</span></div>
+    <p class="desc">Your name appears on your final pick card.</p>
+    <label for="name">Your name</label>
+    <input id="name" maxlength="30" placeholder="e.g. Alex" autocomplete="given-name">
+  </section>
+
+  <section class="card">
+    <div class="sectionhead"><h2>2. Playoff field <span class="points">12 pts</span></h2><span id="playoffCount" class="counter">0 / 12</span></div>
+    <p class="desc">Choose exactly six teams from each conference.</p>
+    <div class="rowlabel">Eastern Conference <span id="eastCount" class="counter">0 / 6</span></div>
+    <div class="teamgrid" id="eastGrid"></div>
+    <div class="rowlabel">Western Conference <span id="westCount" class="counter">0 / 6</span></div>
+    <div class="teamgrid" id="westGrid"></div>
+  </section>
+
+  <section class="card">
+    <div class="sectionhead"><h2>3. The big calls</h2><span class="points">11 pts</span></div>
+    <p class="desc">Four chances to plant your flag before the season starts.</p>
+    <div class="grid2">
+      <div><label>Stanley Cup champion <span class="points">5</span></label><select id="cup"></select></div>
+      <div><label>Best regular-season record <span class="points">2</span></label><select id="best"></select></div>
+      <div><label>Worst regular-season record <span class="points">2</span></label><select id="worst"></select></div>
+      <div><label>Your team <span class="points">2</span></label><select id="mine"></select></div>
+    </div>
+  </section>
+
+  
+
+  <section class="card">
+    <div class="sectionhead"><h2>5. Over / under</h2><span class="points">1 pt each</span></div>
+    <p class="desc">Trust your gut: ten yes or no calls on the season. Answer all ten calls, then lock in your season.</p>
+    <div id="ou"></div>
+  </section>
+
+  <section class="card">
+    <div class="sectionhead"><h2>6. Season superlatives</h2><span class="points">3 calls</span></div>
+    <p class="desc">Pick the players and team you think will define the season.</p>
+    <div class="grid2">
+      <div><label>Hart Trophy winner</label><input id="hart" maxlength="60" placeholder="Player name"></div>
+      <div><label>Breakout player</label><input id="breakout" maxlength="60" placeholder="Player name"></div>
+      <div><label>Biggest surprise team</label><input id="surpriseTeam" maxlength="60" placeholder="Team name"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="sectionhead"><h2>7. Your bold prediction</h2><span class="points">5 pts</span></div>
+    <p class="desc">Give us one prediction that would make everyone say, “No way.”</p>
+    <textarea id="bold" maxlength="300" placeholder="A surprise team makes the playoffs..."></textarea>
+  </section>
+
+  <section class="card">
+    <div class="sectionhead"><h2>8. Hockey trivia</h2><span class="points">Bonus</span></div>
+    <p class="desc">Seven questions. Twelve seconds each. Speed matters.</p>
+    <div id="quiz" class="quizbox">
+      <button class="btn" id="startQuiz">Start trivia</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="sectionhead"><h2>Final check</h2><span class="muted">You can edit anything above</span></div>
+    <div id="error" class="error"></div>
+    <div class="actions">
+      <button class="btn" id="lock">🔒 Lock in my picks</button>
+    </div>
+  </section>
+
+  <section class="card result" id="result">
+    <div class="kicker">Your 2026–27 card</div>
+    <h2 id="resultTitle">Locked in!</h2>
+    <p id="resultSub" class="desc"></p>
+    <div class="cardpick" id="resultFantasy"></div>
+    <div id="resultBody"></div>
+    <div class="actions" style="margin-top:18px">
+      <button class="btn" id="copy">Copy pick card</button>
+      <button class="btn home-btn" id="startAgain" title="Start over and return to the home screen">🏠 Start Again</button>
+    </div>
+  </section>
+
+  
+
+  <div class="footer">Built as a standalone pick'em • Picks save to the shared leaderboard when you lock in.</div>
+</div>
+
+<script>
+const DATA={"E":{"BOS":"Boston","BUF":"Buffalo","DET":"Detroit","FLA":"Florida","MTL":"Montreal","OTT":"Ottawa","TB":"Tampa Bay","TOR":"Toronto","CAR":"Carolina","CBJ":"Columbus","NJ":"New Jersey","NYI":"NY Islanders","NYR":"NY Rangers","PHI":"Philadelphia","PIT":"Pittsburgh","WSH":"Washington"},"W":{"CHI":"Chicago","COL":"Colorado","DAL":"Dallas","MIN":"Minnesota","NSH":"Nashville","STL":"St. Louis","UTA":"Utah","WPG":"Winnipeg","ANA":"Anaheim","CGY":"Calgary","EDM":"Edmonton","LA":"Los Angeles","SJ":"San Jose","SEA":"Seattle","VAN":"Vancouver","VGK":"Vegas"},"P":{"F":[["Connor McDavid",40],["Nathan MacKinnon",40],["Leon Draisaitl",35],["Auston Matthews",35],["Nikita Kucherov",35],["Kirill Kaprizov",30],["Mikko Rantanen",30],["Jack Eichel",28],["Mitch Marner",28],["Connor Bedard",25],["Sidney Crosby",25],["Alex Ovechkin",20]],"D":[["Cale Makar",35],["Quinn Hughes",33],["Zach Werenski",28],["Evan Bouchard",25],["Miro Heiskanen",25],["Matthew Schaefer",25],["Roman Josi",22],["Adam Fox",22]],"G":[["Connor Hellebuyck",35],["Andrei Vasilevskiy",32],["Igor Shesterkin",30],["Jake Oettinger",25],["Ilya Sorokin",22],["Logan Thompson",20],["Carter Hart",20],["Jeremy Swayman",20]]},"Q":[["How many players does a team have on the ice at once, including the goalie?",["Four","Five","Six","Seven"],2,"Five skaters plus one goalie."],["How many regular-season games does each team play in 2026-27?",["78","82","84","88"],2,"This is the 84-game season assumption used by the original quiz."],["Which team is the defending Stanley Cup champion?",["Florida Panthers","Carolina Hurricanes","Vegas Golden Knights","Edmonton Oilers"],1,"Carolina is the answer used by the original quiz."],["What do you call three goals by one player in a single game?",["Triple play","Hat trick","Power trick","Triple crown"],1,"Fans traditionally toss hats onto the ice."],["Alex Ovechkin is in his 22nd NHL season with which team?",["Penguins","Capitals","Blackhawks","Rangers"],1,"He has played his NHL career in Washington."],["How many teams make the Stanley Cup Playoffs in total?",["12","14","16","20"],2,"Eight teams qualify from each conference."],["Which two teams play in the Heritage Classic in Winnipeg on October 25?",["Jets vs. Canadiens","Jets vs. Oilers","Jets vs. Maple Leafs","Jets vs. Flames"],0,"The original quiz uses Jets vs. Canadiens."]]};
+const ALL={...DATA.E,...DATA.W};
+// Approximate game projections used to score fantasy before real season stats are entered.
+const FANTASY_PROJECTIONS={
+  "Connor McDavid":125,"Nathan MacKinnon":118,"Leon Draisaitl":112,"Auston Matthews":105,
+  "Nikita Kucherov":112,"Kirill Kaprizov":100,"Mikko Rantanen":98,"Jack Eichel":93,
+  "Mitch Marner":90,"Connor Bedard":86,"Sidney Crosby":78,"Alex Ovechkin":75,
+  "Cale Makar":100,"Quinn Hughes":95,"Zach Werenski":85,"Evan Bouchard":86,
+  "Miro Heiskanen":74,"Matthew Schaefer":72,"Roman Josi":75,"Adam Fox":78,
+  "Connor Hellebuyck":105,"Andrei Vasilevskiy":97,"Igor Shesterkin":95,"Jake Oettinger":90,
+  "Ilya Sorokin":88,"Logan Thompson":80,"Carter Hart":76,"Jeremy Swayman":82
+};
+function projectedPlayerPoints(k){
+  const name=getPick(k);
+  if(!name)return 0;
+  return FANTASY_PROJECTIONS[name] || (k==="F"?48:k==="D"?30:36);
+}
+function projectedFantasyPoints(){
+  let total=0;
+  ["F","D","G"].forEach(k=>{const p=projectedPlayerPoints(k);total+=state.cap===k?p*2:p});
+  if((state.sleeper||"").trim())total+=18;
+  return Math.round(total);
+}
+function fantasyLeaderboardPoints(){
+  // Scale fantasy projections into a points range that can sit alongside prediction accuracy.
+  return Math.round(projectedFantasyPoints()/10);
+}
+function localOverallPoints(){
+  return fantasyLeaderboardPoints()+Math.round((+state.quizScore||0)/10);
+}
+const state={
+  name:"",E:[],W:[],cup:"",best:"",worst:"",mine:"",
+  pick:{F:"Connor McDavid",D:"Evan Bouchard",G:"Jake Oettinger"},custom:{F:"",D:"",G:""},cap:"F",sleeper:"",
+  ou:Array(10).fill(""),hart:"",breakout:"",surpriseTeam:"",bold:"",quiz:0,quizScore:0,quizCorrect:0,
+  quizDone:false,locked:false
+};
+const OU=[
+ "The Oilers finish with 100+ regular-season points",
+ "The Oilers win the Pacific Division",
+ "The Oilers reach the Stanley Cup Final",
+ "An Oilers player scores 50+ goals",
+ "The Utah Mammoth make the Stanley Cup Playoffs",
+ "The Utah Mammoth finish above .500",
+ "The Utah Mammoth win a playoff series",
+ "The Maple Leafs finish with 100+ regular-season points",
+ "The Maple Leafs win the Atlantic Division",
+ "At least two of the Oilers, Mammoth and Maple Leafs reach the Conference Finals"
+];
+
+const $=id=>document.getElementById(id);
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function teamName(k){return ALL[k]||k||""}
+function renderTeams(){
+  for(const [id,conf,key] of [["eastGrid",DATA.E,"E"],["westGrid",DATA.W,"W"]]){
+    const box=$(id);box.innerHTML="";
+    Object.entries(conf).forEach(([code,name])=>{
+      const b=document.createElement("button");b.type="button";b.textContent=name;b.title=code;b.setAttribute("aria-pressed",String(state[key].includes(code)));
+      b.className=state[key].includes(code)?"selected":"";
+      b.onclick=()=>toggleTeam(key,code,b);box.appendChild(b);
+    });
+  }
+  $("eastCount").textContent=`${state.E.length} / 6`;
+  $("westCount").textContent=`${state.W.length} / 6`;
+  $("eastCount").className="counter "+(state.E.length===6?"done":"");
+  $("westCount").className="counter "+(state.W.length===6?"done":"");
+  $("playoffCount").textContent=`${state.E.length+state.W.length} / 12`;
+}
+function toggleTeam(conf,code,btn){
+  const a=state[conf],i=a.indexOf(code);
+  if(i>=0)a.splice(i,1); else if(a.length<6)a.push(code); else return;
+  renderTeams(); updateProgress(); autoSave();
+}
+function populateSelects(){
+  ["cup","best","worst","mine"].forEach(id=>{
+    $(id).innerHTML='<option value="">Choose a team</option>'+Object.entries(ALL).sort((a,b)=>a[1].localeCompare(b[1])).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join("");
+    $(id).onchange=()=>{state[id]=$(id).value;updateProgress();autoSave()};
+  });
+}
+function renderFantasy(){
+  const box=$("fantasy");box.innerHTML="";
+  for(const k of ["F","D","G"]){
+    const title={F:"Forward",D:"Defenseman",G:"Goalie"}[k];
+    const row=document.createElement("div");row.innerHTML=`<div class="rowlabel">${title}</div>`;
+    const g=document.createElement("div");g.className="playergrid";
+    DATA.P[k].forEach(([name,cost])=>{
+      const b=document.createElement("button");b.type="button";
+      b.className=state.pick[k]===name?"selected":"";
+      b.innerHTML=`<span class="player-name">${esc(name)}</span><span class="player-meta"><span>${cost} coins</span><span>📈 ${FANTASY_PROJECTIONS[name]||"custom"} proj. pts</span></span>`;
+      b.onclick=()=>{state.custom[k]="";$(`custom${k}`).value="";state.pick[k]=state.pick[k]===name?"":name;renderFantasy();updateFantasy();autoSave()};
+      g.appendChild(b);
+    });
+    row.appendChild(g);box.appendChild(row);
+  }
+  updateFantasy();
+}
+function getPick(k){return state.custom[k].trim()||state.pick[k]}
+function costOf(k){
+  if(state.custom[k].trim())return 10;
+  const p=DATA.P[k].find(x=>x[0]===state.pick[k]);return p?p[1]:0;
+}
+function updateFantasy(){
+  let spent=0;["F","D","G"].forEach(k=>spent+=costOf(k));if((state.sleeper||"").trim())spent+=5;
+  $("coins").textContent=100-spent;$("budgetMeter").style.width=Math.min(100,spent)+"%";
+  $("budgetMeter").style.background=spent>100?"var(--accent2)":"linear-gradient(90deg,var(--accent),var(--good))";
+  ["F","D","G"].forEach(k=>$(k==="F"?"customF":k==="D"?"customD":"customG").oninput=e=>{
+    state.custom[k]=e.target.value;state.pick[k]="";renderFantasy();updateFantasy();autoSave();
+  });
+  const cap=$("captain");cap.innerHTML="";
+  for(const k of ["F","D","G"]){
+    const b=document.createElement("button");b.type="button";b.textContent={F:"Forward",D:"Defense",G:"Goalie"}[k];
+    b.className=state.cap===k?"selected":"";b.onclick=()=>{state.cap=state.cap===k?"":k;updateFantasy();updateProgress();autoSave()};
+    cap.appendChild(b);
+  }
+  const ok=getPick("F")&&getPick("D")&&getPick("G")&&state.cap&&spent<=100;
+  $("fantasyStatus").textContent=spent>100?"You're over budget — remove a player.":ok?`Lineup ready • ${100-spent} coins left • ${state.cap==="F"?"Forward":state.cap==="D"?"Defenseman":"Goalie"} is captain.`:"Pick all three positions and a captain.";
+  $("fantasyStatus").style.borderLeftColor=ok?"var(--good)":"var(--gold)";
+}
+function renderOU(){
+  const box=$("ou");if(!box)return;box.innerHTML="";
+  OU.forEach((q,i)=>{
+    const d=document.createElement("div");d.className="ou-question";d.innerHTML=`<label>${q}</label><div class="radio2 ou-options" role="group" aria-label="${q.replace(/"/g,"&quot;")}"></div>`;
+    ["Yes","No"].forEach(v=>{const b=document.createElement("button");b.type="button";b.textContent=v==="Yes"?"✓ YES":"✕ NO";b.setAttribute("aria-pressed",String(state.ou[i]===v));b.className=state.ou[i]===v?"selected":"";b.onclick=()=>{state.ou[i]=v;renderOU();updateProgress();autoSave()};d.querySelector(".radio2").appendChild(b)});
+    box.appendChild(d);
+  });
+}
+function setupInputs(){
+  $("name").oninput=e=>{state.name=e.target.value;updateProgress();autoSave()};
+  $("hart").oninput=e=>{state.hart=e.target.value;autoSave();updateProgress()};$("breakout").oninput=e=>{state.breakout=e.target.value;autoSave();updateProgress()};$("surpriseTeam").oninput=e=>{state.surpriseTeam=e.target.value;autoSave();updateProgress()};
+  $("bold").oninput=e=>{state.bold=e.target.value;autoSave()};
+  $("sleeper").oninput=e=>{state.sleeper=e.target.value;updateFantasy();updateProgress();autoSave()};
+}
+function completion(){
+  const checks=[
+    !!state.name, state.E.length===6,state.W.length===6,!!state.cup,!!state.best,!!state.worst,!!state.mine,
+    !!getPick("F"),!!getPick("D"),!!getPick("G"),!!state.cap,!!state.hart,!!state.breakout,!!state.surpriseTeam,state.ou.every(Boolean)
+  ];
+  return Math.round(checks.filter(Boolean).length/checks.length*100);
+}
+function updateProgress(){
+  const p=completion();$("progressBar").style.width=p+"%";$("progressText").textContent=p+"% complete";
+  const hints=p<25?"Start with your name":p<50?"Choose your playoff field":p<75?"Make your big calls":p<100?"Finish the last few picks":"Ready to lock in!";
+  $("progressHint").textContent=hints;
+}
+function validate(){
+  const errs=[];
+  if(window.pastDeadline&&pastDeadline())errs.push("Picks are closed.");
+  if(!state.name.trim())errs.push("Add your name.");
+  if(state.E.length!==6||state.W.length!==6)errs.push("Pick exactly 6 East and 6 West playoff teams.");
+  if(!state.cup||!state.best||!state.worst||!state.mine)errs.push("Fill in all four big-pick team choices.");
+  if(!getPick("F")||!getPick("D")||!getPick("G")||!state.cap)errs.push("Complete your fantasy trio and choose a captain.");
+  let spent=["F","D","G"].reduce((s,k)=>s+costOf(k),0)+((state.sleeper||"").trim()?5:0);if(spent>100)errs.push("Your fantasy trio is over the 100-coin budget.");
+  if(state.ou.some(x=>!x))errs.push("Answer all ten over/under questions.");
+  if(!state.hart||!state.breakout||!state.surpriseTeam)errs.push("Complete all three season superlatives.");
+  return errs;
+}
+function pickText(){
+  return `NHL 2026–27 PICK CARD — ${state.name}
+East: ${state.E.map(teamName).join(", ")}
+West: ${state.W.map(teamName).join(", ")}
+Cup: ${teamName(state.cup)}
+Best record: ${teamName(state.best)}
+Worst record: ${teamName(state.worst)}
+My team: ${teamName(state.mine)}
+Fantasy: F ${getPick("F")} • D ${getPick("D")} • G ${getPick("G")} • Captain ${getPick(state.cap)}
+Sleeper: ${state.sleeper||"(none)"}\nProjected fantasy points: ${projectedFantasyPoints()}\nCoins used: ${["F","D","G"].reduce((s,k)=>s+costOf(k),0)+((state.sleeper||"").trim()?5:0)}
+Hart Trophy: ${state.hart||"(none)"}
+Breakout player: ${state.breakout||"(none)"}
+Surprise team: ${state.surpriseTeam||"(none)"}
+Bold prediction: ${state.bold||"(none)"}`;
+}
+function lockIn(){
+  const errs=validate();$("error").textContent=errs.join(" ");
+  if(errs.length)return;
+  state.locked=true;
+  $("resultTitle").textContent=`Locked in, ${state.name}!`;
+  $("resultSub").textContent=`Your card is ${completion()}% complete and ready to share.`;
+  $("resultFantasy").innerHTML=[["Forward",getPick("F")],["Defenseman",getPick("D")],["Goalie",getPick("G")],["Captain",getPick(state.cap)],["Fantasy pts",projectedFantasyPoints()]].map(x=>`<div class="mini"><span class="muted">${x[0]}</span><b>${esc(x[1])}</b></div>`).join("");
+  $("resultBody").innerHTML=`<p><b>🏆 Cup:</b> ${esc(teamName(state.cup))} &nbsp; <b>⭐ Best:</b> ${esc(teamName(state.best))}</p>
+  <p><b>Playoffs:</b> ${state.E.map(teamName).concat(state.W.map(teamName)).map(esc).join(" • ")}</p>
+  <p><b>Season calls:</b> Hart — ${esc(state.hart)} · Breakout — ${esc(state.breakout)} · Surprise team — ${esc(state.surpriseTeam)}</p><p><b>Fantasy projection:</b> ${projectedFantasyPoints()} projected points (${fantasyLeaderboardPoints()} leaderboard points)</p><p><b>Trivia bonus:</b> ${Math.round((+state.quizScore||0)/10)} leaderboard points</p><p><b>Sleeper pick:</b> ${esc(state.sleeper||"None")}</p><p><b>Bold prediction:</b> ${esc(state.bold||"None")}</p>`;
+  $("result").style.display="block";saveLeaderboard();window.unlockPredictionDNA&&window.unlockPredictionDNA();$("result").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function saveLeaderboard(){window.sharedSave&&sharedSave();
+  const key="nhl_pick_cards_2026_27";let rows=JSON.parse(localStorage.getItem(key)||"[]");
+  rows=rows.filter(r=>r.name!==state.name);rows.unshift({name:state.name,score:localOverallPoints(),fantasyPoints:fantasyLeaderboardPoints(),projected:projectedFantasyPoints(),triviaPoints:Math.round((+state.quizScore||0)/10),predictionProgress:completion(),time:Date.now(),cup:teamName(state.cup)});
+  localStorage.setItem(key,JSON.stringify(rows.slice(0,20)));renderLeaderboard();
+}
+function renderLeaderboard(){if(window.sharedReady)return sharedRender();return renderLeaderboardLocal()}
+function renderLeaderboardLocal(){
+  const rows=JSON.parse(localStorage.getItem("nhl_pick_cards_2026_27")||"[]");
+  $("leaderboard").innerHTML=rows.length?rows.sort((a,b)=>(+b.score||0)-(+a.score||0)).map((r,i)=>`<div class="leaderrow"><span><b>${i+1}. ${esc(r.name)}</b><br><span class="muted">${esc(r.cup)} · Fantasy ${r.fantasyPoints??r.score} pts · Trivia ${r.triviaPoints||0} pts · Picks ${r.predictionProgress??0}% ready</span></span><strong>${r.score} pts</strong></div>`).join(""):"<div class=\"notice\">No saved cards yet. Submit a lineup to join the Fantasy Race.</div>";
+}
+function autoSave(){localStorage.setItem("nhl_pick_draft_2026_27",JSON.stringify(state))}
+function loadDraft(){
+  try{const s=JSON.parse(localStorage.getItem("nhl_pick_draft_2026_27"));if(!s)return;
+    Object.assign(state,s);
+    if(!Array.isArray(state.E))state.E=[];else state.E=state.E.filter(code=>DATA.E[code]);
+    if(!Array.isArray(state.W))state.W=[];else state.W=state.W.filter(code=>DATA.W[code]);
+    if(!Array.isArray(state.ou)||state.ou.length!==10)state.ou=Array(10).fill("");
+    state.ou=state.ou.map(v=>v==="Yes"||v==="No"?v:"");
+    if(!state.pick||typeof state.pick!=="object")state.pick={F:"Connor McDavid",D:"Evan Bouchard",G:"Jake Oettinger"};
+    if(!state.custom||typeof state.custom!=="object")state.custom={F:"",D:"",G:""};
+    if(!Array.isArray(state.E))state.E=[];if(!Array.isArray(state.W))state.W=[];
+    state.pick=state.pick||{F:"",D:"",G:""};state.custom=state.custom||{F:"",D:"",G:""};
+    state.sleeper=state.sleeper||"";
+    if(!["F","D","G"].some(k=>state.pick[k]||state.custom[k])){state.pick={F:"Connor McDavid",D:"Evan Bouchard",G:"Jake Oettinger"};state.cap="F";}
+    else if(!state.cap)state.cap="F";
+    $("name").value=state.name||"";["cup","best","worst","mine","hart","breakout","surpriseTeam","bold","sleeper"].forEach(id=>{if($(id))$(id).value=state[id]||""});
+    ["F","D","G"].forEach(k=>$(k==="F"?"customF":k==="D"?"customD":"customG").value=state.custom?.[k]||"");
+  }catch{}
+}
+function quizStart(){
+  state.quiz=0;state.quizScore=0;state.quizCorrect=0;state.quizDone=false;showQuestion();
+}
+let quizTimer=null;
+function showQuestion(){
+  clearTimeout(quizTimer);
+  if(state.quiz>=DATA.Q.length){endQuiz();return}
+  const q=DATA.Q[state.quiz],box=$("quiz");
+  box.innerHTML=`<div class="timer"><i id="timerBar"></i></div><p><b>Question ${state.quiz+1} of ${DATA.Q.length}</b> · ${state.quizScore} points</p><h3>${esc(q[0])}</h3><div class="quizopt" id="quizOpts"></div><p id="quizFeedback" class="muted"></p>`;
+  q[1].forEach((a,i)=>{const b=document.createElement("button");b.type="button";b.textContent=a;b.onclick=()=>answerQuiz(i);$("quizOpts").appendChild(b)});
+  requestAnimationFrame(()=>{$("timerBar").style.width="0%";$("timerBar").style.transition="width 12s linear"});
+  quizTimer=setTimeout(()=>answerQuiz(-1),12000);
+}
+function answerQuiz(i){
+  clearTimeout(quizTimer);const q=DATA.Q[state.quiz];const buttons=[...$("quizOpts").children];buttons.forEach((b,j)=>{b.disabled=true;if(j===q[2])b.classList.add("correct");if(j===i&&i!==q[2])b.classList.add("wrong")});
+  if(i===q[2]){state.quizCorrect++;state.quizScore+=10}
+  $("quizFeedback").textContent=(i===q[2]?"Correct! ":"Not quite. ")+q[3];
+  const next=document.createElement("button");next.className="btn";next.textContent=state.quiz===DATA.Q.length-1?"See result":"Next question";next.onclick=()=>{state.quiz++;showQuestion()};$("quiz").appendChild(next);
+}
+function endQuiz(){state.quizDone=true;$("quiz").innerHTML=`<div class="scorebig">${state.quizScore}</div><p><b>${state.quizCorrect}/${DATA.Q.length} correct</b> · ${state.quizScore>=60?"Hockey brain unlocked.":"Good warm-up — you can try again."}</p><button class="btn secondary" id="again">Play again</button>`;$("again").onclick=quizStart}
+async function copyCard(){
+  const t=pickText();try{await navigator.clipboard.writeText(t);$("copy").textContent="Copied!";setTimeout(()=>$("copy").textContent="Copy pick card",1400)}catch{$("copy").textContent="Select text manually"}
+}
+async function shareCard(){const t=pickText();if(navigator.share){try{await navigator.share({title:"My NHL 2026–27 Picks",text:t})}catch{}}else copyCard()}
+function resetAll(){localStorage.removeItem("nhl_pick_draft_2026_27");window.location.href=window.location.pathname+window.location.search;}
+$("startQuiz").onclick=quizStart;$("lock").onclick=lockIn;$("copy").onclick=copyCard;$("startAgain").onclick=resetAll;
+$("themeBtn").onclick=()=>{document.body.classList.toggle("light");if(document.body.classList.contains("light")){document.documentElement.style.setProperty("--bg","#eef5fb");document.documentElement.style.setProperty("--panel","#ffffff");document.documentElement.style.setProperty("--panel2","#f4f8fc");document.documentElement.style.setProperty("--text","#102033");document.documentElement.style.setProperty("--muted","#5d7187");document.documentElement.style.setProperty("--line","#d7e2ed");$("themeBtn").textContent="☀ Dark"}else location.reload()};
+populateSelects();setupInputs();loadDraft();renderTeams();renderFantasy();renderOU();updateProgress();renderLeaderboard();
+</script>
+
+<style>
+/* ===== MIND-BLOWING GAME LAYER ===== */
+:root{
+  --glow:#69b7ff; --gold:#ffd166; --danger:#ff5d73; --success:#55e6a5;
+  --panel2:rgba(255,255,255,.055);
+}
+.game-layer{margin-top:28px;display:grid;gap:18px}
+.game-panel{background:linear-gradient(145deg,rgba(17,27,45,.96),rgba(9,15,27,.96));
+border:1px solid rgba(105,183,255,.20);border-radius:22px;padding:22px;box-shadow:0 18px 60px rgba(0,0,0,.28),0 0 35px rgba(105,183,255,.06)}
+.game-panel h2{margin:0 0 7px;font-size:1.35rem}
+.game-sub{color:#9db0c8;font-size:.92rem;margin-bottom:18px}
+.xpbar{height:13px;border-radius:99px;background:#101a2a;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.xpfill{height:100%;width:0%;background:linear-gradient(90deg,#4ca7ff,#8d7cff,#ff62c6);transition:width .7s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 18px rgba(105,183,255,.55)}
+.xprow{display:flex;justify-content:space-between;align-items:center;margin:0 0 8px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(105,183,255,.1);border:1px solid rgba(105,183,255,.25);font-size:.78rem;font-weight:800;letter-spacing:.04em}
+.dna{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.dna-card{padding:14px;border-radius:16px;background:var(--panel2);border:1px solid rgba(255,255,255,.07)}
+.dna-card strong{display:block;font-size:1.5rem;margin-top:5px}
+.meter{height:7px;border-radius:99px;background:#101a2a;margin-top:9px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#55e6a5,#ffd166,#ff5d73);transition:width .7s}
+.bracket{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.bracket-side{display:grid;gap:9px}
+.series{display:grid;grid-template-columns:1fr 28px 1fr;align-items:center;gap:7px}
+.team-slot{padding:10px 11px;border-radius:11px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);font-size:.84rem}
+.team-slot.winner{border-color:rgba(85,230,165,.5);box-shadow:0 0 16px rgba(85,230,165,.09)}
+.vs{text-align:center;color:#71839a;font-size:.72rem;font-weight:900}
+.simrow{display:flex;flex-wrap:wrap;gap:10px}
+.simbtn{cursor:pointer;border:1px solid rgba(105,183,255,.25);background:rgba(105,183,255,.08);color:inherit;border-radius:12px;padding:11px 15px;font-weight:800;transition:.18s}
+.simbtn:hover{transform:translateY(-2px);background:rgba(105,183,255,.15);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.sim-result{margin-top:15px;padding:16px;border-radius:16px;background:rgba(255,255,255,.04);display:none}
+.sim-result.show{display:block;animation:rise .45s ease}
+.result-bars{display:grid;gap:9px;margin-top:12px}
+.rbar{display:grid;grid-template-columns:125px 1fr 48px;gap:9px;align-items:center;font-size:.82rem}
+.rtrack{height:9px;border-radius:99px;background:#111b2b;overflow:hidden}
+.rtrack i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4ca7ff,#8d7cff);transition:width .8s}
+.pred-card{position:relative;overflow:hidden;border-radius:24px;padding:25px;background:
+radial-gradient(circle at 85% 15%,rgba(255,209,102,.2),transparent 27%),
+linear-gradient(135deg,#10223b,#0a1220 60%,#16102b);border:1px solid rgba(255,255,255,.13)}
+.pred-card:after{content:"";position:absolute;inset:-80%;background:linear-gradient(100deg,transparent 40%,rgba(255,255,255,.09) 50%,transparent 60%);transform:rotate(12deg);animation:shine 6s infinite}
+.pred-content{position:relative;z-index:1}
+.pred-title{font-size:.75rem;letter-spacing:.18em;color:#a7bdd6;font-weight:900}
+.pred-name{font-size:2rem;font-weight:950;margin:7px 0 15px}
+.pred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.pred-stat{padding:11px;border-radius:13px;background:rgba(0,0,0,.18)}
+.pred-stat span{display:block;color:#94a9c0;font-size:.72rem}.pred-stat b{font-size:1.15rem}
+.toast{position:fixed;right:22px;bottom:22px;z-index:1000;padding:13px 17px;border-radius:14px;background:#101c2e;border:1px solid rgba(105,183,255,.35);box-shadow:0 14px 45px rgba(0,0,0,.4);transform:translateY(30px);opacity:0;pointer-events:none;transition:.3s}
+.toast.show{transform:translateY(0);opacity:1}
+.reveal{position:fixed;inset:0;z-index:999;display:none;place-items:center;background:rgba(2,6,14,.86);backdrop-filter:blur(12px)}
+.reveal.show{display:grid}
+.reveal-box{text-align:center;padding:35px;max-width:620px;animation:pop .65s cubic-bezier(.2,1.4,.4,1)}
+.reveal-kicker{font-size:.8rem;letter-spacing:.22em;color:#9fb6d0;font-weight:900}
+.reveal-team{font-size:clamp(2.5rem,8vw,6rem);font-weight:1000;margin:12px 0}
+.reveal-sub{color:#a9bad0}
+@keyframes pop{from{opacity:0;transform:scale(.55) translateY(30px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes shine{0%,65%{transform:translateX(-55%) rotate(12deg)}100%{transform:translateX(55%) rotate(12deg)}}
+@media(max-width:760px){.dna{grid-template-columns:repeat(2,1fr)}.bracket{grid-template-columns:1fr}.pred-grid{grid-template-columns:1fr 1fr}.rbar{grid-template-columns:95px 1fr 40px}}
+</style>
+
+<div class="game-layer" id="mindGame">
+  <section class="game-panel dna-panel" id="predictionDNA">
+    <div class="sectionhead"><h2>🧬 Prediction DNA</h2><span class="badge" id="dnaStatus">LOCKED · 0%</span></div>
+    <div class="game-sub">Your profile stays at 0% until you submit your picks. Then the game reveals your prediction style.</div>
+    <div class="dna dna-clean" id="dnaGrid">
+      <div class="dna-card">🧠 Analysis<strong id="dnaAnalysis">0%</strong><div class="meter"><i></i></div></div>
+      <div class="dna-card">🔥 Boldness<strong id="dnaBold">0%</strong><div class="meter"><i></i></div></div>
+      <div class="dna-card">🎲 Risk<strong id="dnaRisk">0%</strong><div class="meter"><i></i></div></div>
+      <div class="dna-card">🏆 Contender<strong id="dnaContender">0%</strong><div class="meter"><i></i></div></div>
+    </div>
+    <div class="dna-verdict" id="dnaVerdict">Submit your picks to reveal your GM identity.</div>
+  </section>
+
+  <section class="game-panel prediction-card-panel">
+    <div class="sectionhead"><h2>🪪 Prediction Card</h2><span class="badge">YOUR SEASON</span></div>
+    <div class="game-sub">A polished summary of your championship call, season picks and fantasy trio.</div>
+    <div class="modern-pred-card">
+      <div class="modern-card-top"><span>2026–27 NHL PICK 'EM</span><span>🏒 OFFICIAL GM CARD</span></div>
+      <div class="modern-card-title" id="predName">YOUR GM PROFILE</div>
+      <div class="modern-card-sub" id="predCardSub">Lock in your picks to generate your card.</div>
+      <div class="modern-card-grid">
+        <div><span>🏆 CUP PICK</span><b id="cardCup">Awaiting submission</b></div>
+        <div><span>📈 BEST RECORD</span><b id="cardBest">Awaiting submission</b></div>
+        <div><span>💙 YOUR TEAM</span><b id="cardMine">Awaiting submission</b></div>
+        <div><span>🧬 PREDICTION DNA</span><b id="cardDNA">0%</b></div>
+      </div>
+      <div class="modern-card-bottom">
+        <div><span>FANTASY</span><b id="cardFantasy">Complete Fantasy first</b></div>
+        <div><span>SEASON CALLS</span><b id="cardSuperlative">Awaiting submission</b></div>
+        <div><span>BOLD PREDICTION</span><b id="cardBold">Awaiting submission</b></div>
+      </div>
+    </div>
+    <div class="game-sub" style="margin-top:10px">Use <b>Copy pick card</b> above to share your submitted predictions.</div>
+  </section>
+</div>
+
+<style>
+/* ===== ULTIMATE NHL EXPERIENCE ===== */
+.arena-intro{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:
+radial-gradient(circle at 50% 55%,rgba(57,130,210,.24),transparent 28%),
+linear-gradient(180deg,#030812,#071526 55%,#02050a);overflow:hidden}
+.arena-intro.hide{animation:arenaOut .8s forwards;pointer-events:none}
+.arena-rink{position:absolute;width:min(850px,110vw);height:min(430px,58vw);border:3px solid rgba(255,255,255,.17);border-radius:50%;transform:perspective(700px) rotateX(60deg);box-shadow:0 0 90px rgba(70,160,255,.12)}
+.arena-light{position:absolute;width:50vw;height:50vh;background:radial-gradient(circle,rgba(120,190,255,.12),transparent 65%);animation:lightSweep 3.5s infinite alternate}
+.arena-copy{position:relative;text-align:center;z-index:2}
+.arena-copy .kicker{font-size:.75rem;letter-spacing:.32em;color:#9eb6d1;font-weight:900}
+.arena-copy h1{font-size:clamp(3rem,9vw,7rem);line-height:.9;margin:15px 0;background:linear-gradient(90deg,#fff,#8fd0ff,#fff);-webkit-background-clip:text;color:transparent}
+.arena-copy p{color:#a6b8ce}
+.arena-enter{margin-top:22px;padding:14px 25px;border:1px solid rgba(120,195,255,.5);border-radius:14px;background:rgba(75,160,240,.12);color:#fff;font-weight:900;cursor:pointer}
+.logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.logo-card{display:flex;align-items:center;gap:10px;padding:11px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+.team-logo{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;font-size:.72rem;font-weight:1000;letter-spacing:-.04em;background:linear-gradient(145deg,#244a70,#102137);border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 0 15px rgba(255,255,255,.05)}
+.logo-card b{font-size:.78rem}.logo-card small{display:block;color:#7f93aa;margin-top:2px}
+.commentary-box{padding:17px;border-radius:17px;background:linear-gradient(135deg,rgba(255,209,102,.08),rgba(105,183,255,.06));border:1px solid rgba(255,209,102,.16)}
+.commentator{font-size:.76rem;color:#ffd166;font-weight:950;letter-spacing:.08em}.commentary-text{font-size:1.15rem;font-weight:850;margin-top:7px;min-height:29px}
+.achievement-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.achievement{padding:14px;border-radius:15px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);opacity:.45;filter:grayscale(1);transition:.25s}
+.achievement.unlocked{opacity:1;filter:none;border-color:rgba(255,209,102,.35);box-shadow:0 0 22px rgba(255,209,102,.08)}
+.achievement .icon{font-size:1.45rem}.achievement b{display:block;margin-top:5px;font-size:.82rem}.achievement small{color:#879ab0}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.timeline-step{position:relative;padding:14px 9px;text-align:center;border-top:2px solid #25354b;color:#71859d}
+.timeline-step.active{border-color:#5cb7ff;color:#fff}.timeline-step.done{border-color:#55e6a5;color:#aaf4d0}
+.timeline-step strong{display:block;font-size:.74rem}.timeline-step span{display:block;font-size:.68rem;margin-top:4px}
+.upset{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px;border-radius:16px;background:linear-gradient(90deg,rgba(255,82,105,.11),rgba(255,209,102,.06));border:1px solid rgba(255,82,105,.2)}
+.upset strong{color:#ff7a8c}.upset button{white-space:nowrap}
+.draft{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.draft-board{min-height:210px;padding:16px;border-radius:17px;background:#08111e;border:1px solid rgba(105,183,255,.14)}
+.draft-pick{display:flex;align-items:center;gap:10px;padding:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+.draft-pick:last-child{border-bottom:0}.pick-num{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:#14283e;font-weight:900;color:#8fcaff;font-size:.72rem}
+.draft-actions{display:grid;gap:8px;align-content:start}.draft-actions button{width:100%}
+.cup-celebration{position:fixed;inset:0;z-index:3100;display:none;place-items:center;background:rgba(1,4,9,.91);overflow:hidden}
+.cup-celebration.show{display:grid}.cup-rays{position:absolute;inset:-20%;background:repeating-conic-gradient(from 0deg,rgba(255,209,102,.07) 0 5deg,transparent 5deg 15deg);animation:spin 18s linear infinite}
+.trophy{font-size:clamp(5rem,18vw,12rem);filter:drop-shadow(0 0 35px rgba(255,209,102,.4));animation:trophyPop .9s cubic-bezier(.2,1.5,.3,1)}
+.celebrate-copy{position:relative;text-align:center}.celebrate-copy h2{font-size:clamp(2rem,6vw,5rem);margin:8px 0}.celebrate-copy p{color:#b5c5d8}
+.confetti{position:absolute;width:7px;height:18px;background:#ffd166;animation:fall 2.8s linear infinite}
+@keyframes arenaOut{to{opacity:0;visibility:hidden;transform:scale(1.08)}}@keyframes lightSweep{to{transform:translateX(25vw) scale(1.3)}}@keyframes trophyPop{from{transform:scale(.2) translateY(60px);opacity:0}to{transform:none;opacity:1}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes fall{from{transform:translateY(-10vh) rotate(0)}to{transform:translateY(110vh) rotate(720deg)}}
+@media(max-width:760px){.logo-grid,.achievement-grid{grid-template-columns:repeat(2,1fr)}.timeline{grid-template-columns:repeat(3,1fr)}.draft{grid-template-columns:1fr}}
+</style>
+
+<div class="arena-intro" id="arenaIntro">
+  <div class="arena-rink"></div><div class="arena-light"></div>
+  <div class="arena-copy">
+    <div class="kicker">FINAL EDITION · PRIVATE LEAGUE · 2026–27</div>
+    <h1>DROP THE PUCK.</h1>
+    <p>Your picks. Your predictions. Your season.</p>
+    <div class="arena-main-actions">
+      <button class="arena-enter" id="arenaEnter">🏒 ENTER THE ARENA</button>
+      <button class="arena-enter fantasy-enter" id="fantasyOpen">✨ FANTASY</button>
+    </div>
+    <div class="arena-mode-note">Pick your mode. Build your season. Chase the Cup.</div>
+  </div>
+</div>
+
+<div id="arenaUtilityNav" aria-label="Arena quick navigation">
+  <button id="arenaHome" type="button">🏠 HOME</button>
+  <button id="arenaFantasyShortcut" type="button">✨ FANTASY</button>
+</div>
+<div id="fantasyFlashMessage" role="status" aria-live="polite"></div>
+<div class="fantasy-modal" id="fantasyModal" aria-hidden="true">
+  <div class="fantasy-modal-box">
+    <button class="fantasy-close" id="fantasyClose" type="button" aria-label="Close Fantasy">✕</button>
+    <div class="kicker">FANTASY</div>
+    <h2>FANTASY LINEUP BUILDER.</h2>
+    <p class="game-sub">Choose a preset, auto-draft your strongest affordable lineup, or pick every player yourself.</p>
+    <section class="card fantasy-core">
+    <div class="sectionhead"><h2>🏒 Fantasy</h2><span class="points">100-coin budget</span></div>
+    <p class="desc">Pick a forward, defenseman and goalie, select a captain, and stay under 100 coins. Custom players cost 10 coins each; presets are one click.</p>
+    <div class="budget"><span>Coins remaining</span><strong id="coins">100</strong></div>
+    <div class="meter"><i id="budgetMeter"></i></div>
+    
+<div class="fantasy-presets">
+  <div class="fantasy-section-head">
+    <div><span class="fantasy-eyebrow">ONE-CLICK LINEUPS</span><h3>⚡ Choose a Starting Squad</h3></div>
+    <span class="fantasy-mini-badge">100 COIN CAP</span>
+  </div>
+  <div class="fantasy-preset-grid">
+    <button type="button" class="fantasy-preset" data-preset="power">
+      <span class="fp-icon">🚀</span><b>McDavid Power</b><small>McDavid · Bouchard · Oettinger</small><span class="fp-meta">90 coins · star power</span>
+    </button>
+    <button type="button" class="fantasy-preset" data-preset="balanced">
+      <span class="fp-icon">⚖️</span><b>Balanced Stars</b><small>MacKinnon · Heiskanen · Sorokin</small><span class="fp-meta">87 coins · balanced</span>
+    </button>
+    <button type="button" class="fantasy-preset" data-preset="value">
+      <span class="fp-icon">💎</span><b>Value Hunters</b><small>Bedard · Adam Fox · Logan Thompson</small><span class="fp-meta">67 coins · bargain squad</span>
+    </button>
+    <button type="button" class="fantasy-preset" data-preset="blueline">
+      <span class="fp-icon">🛡️</span><b>Blue-Line Blast</b><small>Draisaitl · Makar · Swayman</small><span class="fp-meta">90 coins · defense captain</span>
+    </button>
+    <button type="button" class="fantasy-preset" data-preset="goalie">
+      <span class="fp-icon">🧤</span><b>Goalie Wall</b><small>Matthews · Werenski · Hellebuyck</small><span class="fp-meta">98 coins · goalie captain</span>
+    </button>
+  </div>
+  <div class="fantasy-action-row">
+    <button type="button" class="fantasy-action primary" id="fantasyAutoDraft">🧠 AUTO-DRAFT BEST LINEUP</button>
+    <button type="button" class="fantasy-action" id="fantasyStarterReset">↻ RESET TO STARTER</button>
+    <button type="button" class="fantasy-action" id="fantasyRandom">🎲 RANDOM AFFORDABLE LINEUP</button>
+  </div>
+  <div class="fantasy-build-status" id="fantasyBuildStatus">Pick a preset or build your own lineup below. Your picks are saved with your draft.</div>
+</div>
+
+<div id="fantasy"></div>
+    <div class="grid2" style="margin-top:14px">
+      <div><label>Custom forward <span class="muted">10 coins</span></label><input id="customF" placeholder="Optional"></div>
+      <div><label>Custom defenseman <span class="muted">10 coins</span></label><input id="customD" placeholder="Optional"></div>
+      <div><label>Custom goalie <span class="muted">10 coins</span></label><input id="customG" placeholder="Optional"></div>
+      <div><label>Captain</label><div class="radio2" id="captain"></div></div>
+      <div><label for="sleeper">Sleeper pick <span class="muted">optional · 5 coins</span></label><input id="sleeper" maxlength="50" placeholder="A hidden gem"></div>
+    </div>
+    <div id="fantasyStatus" class="notice" style="margin-top:15px">Pick all three positions and a captain.</div>
+  </section>
+    <div class="fantasy-lab">
+      <div class="fantasy-lab-title">⚡ FANTASY LAB</div>
+      <div class="fantasy-lab-grid">
+        <div class="fantasy-lab-card"><b>📊 Projected Fantasy Points</b><strong id="fantasyProjectedPoints">—</strong><span>Estimated points with captain doubled.</span></div>
+        <div class="fantasy-lab-card"><b>🧪 Lineup Chemistry</b><strong id="fantasyRating">0%</strong><span>Completeness and roster balance.</span></div>
+        <div class="fantasy-lab-card"><b>👑 Captain Boost</b><strong id="fantasyCaptainBoost">—</strong><span>Captain points are doubled.</span></div>
+        <div class="fantasy-lab-card"><b>💰 Salary Remaining</b><strong id="fantasySalaryLeft">100</strong><span>Keep the lineup under budget.</span></div>
+      </div>
+      <div class="fantasy-strategy">
+        <span>CHOOSE YOUR APPROACH</span>
+        <button type="button" data-fstrategy="POWER">⚡ Power</button>
+        <button type="button" data-fstrategy="BALANCED">⚖️ Balanced</button>
+        <button type="button" data-fstrategy="VALUE">💎 Value</button>
+        <strong id="fantasyStrategyText">Choose a strategy to set your lineup vibe.</strong>
+      </div>
+      <div class="fantasy-extra">
+        <div class="fantasy-extra-title">🏒 FANTASY BONUS ZONE</div>
+        <div class="fantasy-extra-grid">
+          <div><b>Captain’s Call</b><span>Captain's projected points count twice.</span></div>
+          <div><b>Sleeper Bonus</b><span>A sleeper costs 5 coins and adds a small projection boost.</span></div>
+          <div><b>Fantasy Race</b><span>Fantasy and trivia contribute to your overall leaderboard total.</span></div>
+        </div>
+      </div>
+      <div class="fantasy-rink-strip"><span>FANTASY DRAFT IN PROGRESS</span><i></i><span>LINEUP SAVED WITH YOUR PICK CARD</span></div>
+    </div>
+    
+<div class="fx-control-room" id="fantasyControlRoom">
+  <div class="fx-section-heading"><div><small>ADVANCED LINEUP TOOLS</small><h3>🧪 Fantasy Control Room</h3></div><span>GM LAB ONLINE</span></div>
+  <div class="fx-metrics">
+    <div><small>LINEUP CHEMISTRY</small><b id="fxChemistry">—</b><span id="fxChemistryNote">Pick your roster</span><i><em id="fxChemistryBar"></em></i></div>
+    <div><small>VALUE SCORE</small><b id="fxValue">—</b><span>Projected points per coin</span><i><em id="fxValueBar"></em></i></div>
+    <div><small>CAPTAIN EDGE</small><b id="fxCaptain">—</b><span id="fxCaptainNote">Choose a captain</span></div>
+    <div><small>GM RATING</small><b id="fxGM">—</b><span id="fxGMNote">Waiting for roster</span></div>
+  </div>
+  <div class="fx-tool">
+    <h4>💾 ROSTER VAULT <small>Save three different lineups on this device</small></h4>
+    <div class="fx-slots">
+      <div><b>SLOT 01</b><span id="fxSlotStatus1">Empty vault</span><button type="button" data-fx-save="1">Save here</button><button type="button" data-fx-load="1" disabled>Load</button></div>
+      <div><b>SLOT 02</b><span id="fxSlotStatus2">Empty vault</span><button type="button" data-fx-save="2">Save here</button><button type="button" data-fx-load="2" disabled>Load</button></div>
+      <div><b>SLOT 03</b><span id="fxSlotStatus3">Empty vault</span><button type="button" data-fx-save="3">Save here</button><button type="button" data-fx-load="3" disabled>Load</button></div>
+    </div>
+  </div>
+  <div class="fx-tool">
+    <h4>🔄 TRADE & UPGRADE LAB <small>Affordable swaps with higher game projections</small></h4>
+    <div class="fx-actions"><button type="button" id="fxFindUpgrades">🔍 Find Upgrades</button><button type="button" id="fxComparePresets">📊 Compare Presets</button><button type="button" id="fxRosterCard">📋 Copy Roster Card</button></div>
+    <div id="fxUpgradeResults" class="fx-results">Run the upgrade lab to find swaps.</div>
+    <div id="fxPresetComparison" class="fx-results" hidden></div>
+  </div>
+  <div class="fx-tool">
+    <h4>⚔️ FANTASY RIVALRY <small>Your roster versus a generated rival</small></h4>
+    <div class="fx-actions"><button type="button" id="fxSimulateRival">🏒 Simulate Matchup</button><button type="button" id="fxNextRival">🎲 New Rival</button></div>
+    <div id="fxRivalScore" class="fx-score"><span>YOU</span><b>—</b><em>VS</em><b>—</b><span>RIVAL</span></div>
+    <div id="fxRivalComment" class="fx-comment">Build a lineup, then test it against a rival.</div>
+  </div>
+
+  <div class="fx-tool fx-score-tracker" id="fxScoreTracker">
+    <div class="fx-tracker-heading"><div><h4>📈 FANTASY SCORE TRACKER</h4><small>Manually log a game or scoring update for your current trio.</small></div><span class="fx-tracker-live">LOCAL SAVE</span></div>
+    <p class="fx-note">Scoring: goal = 3 pts · assist = 2 pts · goalie win = 5 pts · shutout = 3 pts · goalie save = 0.2 pts. Your captain’s position scores double. These are the game’s custom rules, not official NHL fantasy scoring.</p>
+    <div class="fx-tracker-lineup" id="fxTrackerLineup">Select your forward, defenseman, goalie and captain above.</div>
+    <div class="fx-tracker-stats-grid">
+      <div class="fx-tracker-stat"><b>🚀 FORWARD</b><small id="fxTrackerFName">No forward selected</small><label for="fxTrackerFG">Goals</label><input id="fxTrackerFG" type="number" min="0" max="99" step="1" value="0" inputmode="numeric"><label for="fxTrackerFA">Assists</label><input id="fxTrackerFA" type="number" min="0" max="99" step="1" value="0" inputmode="numeric"></div>
+      <div class="fx-tracker-stat"><b>🛡️ DEFENSEMAN</b><small id="fxTrackerDName">No defenseman selected</small><label for="fxTrackerDG">Goals</label><input id="fxTrackerDG" type="number" min="0" max="99" step="1" value="0" inputmode="numeric"><label for="fxTrackerDA">Assists</label><input id="fxTrackerDA" type="number" min="0" max="99" step="1" value="0" inputmode="numeric"></div>
+      <div class="fx-tracker-stat"><b>🧤 GOALIE</b><small id="fxTrackerGName">No goalie selected</small><label for="fxTrackerGW">Wins</label><input id="fxTrackerGW" type="number" min="0" max="99" step="1" value="0" inputmode="numeric"><label for="fxTrackerGSO">Shutouts</label><input id="fxTrackerGSO" type="number" min="0" max="99" step="1" value="0" inputmode="numeric"><label for="fxTrackerGS">Saves</label><input id="fxTrackerGS" type="number" min="0" max="999" step="1" value="0" inputmode="numeric"></div>
+    </div>
+    <div class="fx-tracker-actions"><button type="button" id="fxTrackerLog">➕ LOG SCORING UPDATE</button><button type="button" id="fxTrackerUndo">↩ UNDO LAST</button><button type="button" id="fxTrackerReset">↻ RESET TOTAL</button></div>
+    <div class="fx-tracker-summary"><div><small>SEASON POINTS</small><strong id="fxTrackerTotal">0.0</strong></div><div><small>LOGGED UPDATES</small><strong id="fxTrackerEntries">0</strong></div><div><small>LATEST UPDATE</small><strong id="fxTrackerLatest">—</strong></div></div>
+    <div class="fx-tracker-log-head"><b>SCORING LOG</b><span>Most recent first</span></div>
+    <div class="fx-tracker-log" id="fxTrackerLogList"><div class="fx-tracker-empty">No scoring updates yet. Log your first set of stats above.</div></div>
+    <div class="fx-tracker-foot">Your tracking log is saved in this browser on this device. It does not fetch live NHL stats or sync automatically to other people.</div>
+  </div>
+  <div class="fx-tool">
+    <h4>🏅 FANTASY ACHIEVEMENTS <small>Unlock badges as you experiment</small></h4>
+    <div id="fxAchievements" class="fx-achievements"></div>
+  </div>
+  <div class="fx-tool">
+    <h4>📡 SCOUT RADAR <small>Top projected players by position</small></h4>
+    <div id="fxScoutRadar" class="fx-scouts"></div>
+    <p class="fx-note">Projections are estimates for this game, not official NHL forecasts.</p>
+  </div>
+</div>
+
+<div class="fantasy-modal-actions"><button class="btn secondary" id="fantasyHome" type="button">🏠 HOME</button><button class="btn" id="fantasyDone" type="button">✅ SAVE FANTASY LINEUP</button></div>
+  </div>
+</div>
+
+<section class="game-panel kept-experience" id="keptExperience">
+  <section class="game-panel upset-panel">
+    <div class="sectionhead"><h2>🚨 Upset Alert</h2><span class="badge" id="upsetBadge">STANDBY</span></div>
+    <div class="upset-hero">
+      <div class="upset-light"></div>
+      <div class="upset-copy"><strong id="upsetTitle">UPSET WATCH</strong><p id="upsetText">Lock in your picks to activate the alert system.</p></div>
+      <div class="upset-signal">!</div>
+    </div>
+  </section>
+
+  <section class="game-panel draft-panel">
+    <div class="sectionhead"><h2>🧑‍💼 GM Draft Room</h2><span class="badge">5 TEAM BOARD</span></div>
+    <div class="game-sub">Draft up to five of your playoff teams into a separate franchise board.</div>
+    <div class="draft">
+      <div class="draft-board" id="draftBoard"><div class="muted">Your draft board is empty. Choose a team to start.</div></div>
+      <div class="draft-actions" id="draftActions"></div>
+    </div>
+  </section>
+</section>
+
+<script>
+(function(){
+  var DB=null,UID=null,picksData={},resultsData={};
+  window.sharedReady=false;
+  window.pastDeadline=function(){var d=+resultsData.deadline||0;return d&&Date.now()>d};
+  function scoreBreakdown(d,r){
+    var low=function(x){return String(x||"").trim().toLowerCase()};
+    if(!d)return {prediction:0,fantasy:0,trivia:0,total:0};
+    r=r||{};
+    var prediction=0,po=r.playoff||[];
+    (d.E||[]).concat(d.W||[]).forEach(function(t){if(po.indexOf(t)>-1)prediction++});
+    if(d.cup&&d.cup===r.cup)prediction+=5;
+    if(d.best&&d.best===r.best)prediction+=2;
+    if(d.worst&&d.worst===r.worst)prediction+=2;
+    if(d.mine&&po.indexOf(d.mine)>-1)prediction+=2;
+    (d.ou||[]).forEach(function(a,i){if(r.ou&&r.ou[i]&&r.ou[i]===a)prediction++});
+    if(r.hart&&d.hart&&low(r.hart)===low(d.hart))prediction++;
+    if(r.breakout&&d.breakout&&low(r.breakout)===low(d.breakout))prediction++;
+    if(r.surpriseTeam&&d.surpriseTeam&&low(r.surpriseTeam)===low(d.surpriseTeam))prediction++;
+
+    var fantasyRaw=0, stats=r.fantasy||{}, hasActual=Object.keys(stats).length>0;
+    function statFor(name){
+      var key=low(name);
+      if(stats[key])return stats[key];
+      var found=Object.keys(stats).find(function(k){return low(k)===key});
+      return found?stats[found]:null;
+    }
+    function skater(st){return (+st.goals||0)*2+(+st.assists||0)}
+    function goalie(st){return (+st.wins||0)*2+(+st.goals||0)*2+(+st.assists||0)}
+    if(hasActual){
+      ["F","D","G"].forEach(function(k){
+        var name=(d.pick||{})[k],st=statFor(name),pts=0;
+        if(st)pts=k==="G"?goalie(st):skater(st);
+        fantasyRaw+=(d.cap===k?pts*2:pts);
+      });
+      if(d.sleeper){
+        var sleeper=statFor(d.sleeper);
+        if(sleeper)fantasyRaw+=skater(sleeper);
+      }
+    }else{
+      fantasyRaw=+d.projectedFantasyPoints||0;
+    }
+    var fantasy=hasActual?Math.round(fantasyRaw/5):Math.round(fantasyRaw/10);
+    var trivia=Math.round((+d.quizScore||0)/10);
+    return {prediction:prediction,fantasy:fantasy,trivia:trivia,total:prediction+fantasy+trivia,actualFantasy:hasActual};
+  }
+  function calc(d,r){return scoreBreakdown(d,r).total;}
+  window.sharedRender=function(){
+    var box=document.getElementById("leaderboard"),ids=Object.keys(picksData),dl=+resultsData.deadline||0,hide=dl&&Date.now()<dl;
+    if(!ids.length){box.innerHTML='<div class="notice">No picks yet. Be the first.</div>';return}
+    var rows=ids.map(function(id){var d=picksData[id].data||{},bd=scoreBreakdown(d,resultsData);return {id:id,n:picksData[id].name||"Player",d:d,s:bd.total,bd:bd}}).sort(function(a,b){return b.s-a.s});
+    box.innerHTML=rows.map(function(r,i){
+      var sub=hide&&r.id!=UID?"Picks hidden until the reveal":"Fantasy "+r.bd.fantasy+" · Predictions "+r.bd.prediction+" · Trivia "+r.bd.trivia+(r.bd.actualFantasy?" · live fantasy stats":" · projected fantasy");
+      return '<div class="leaderrow"><span><b>'+(i+1)+". "+esc(r.n)+(r.id==UID?" (you)":"")+'</b><br><span class="muted">'+sub+'</span></span><strong>'+r.s+' pts</strong></div>';
+    }).join("");
+  };
+  window.sharedAdd=function(o){
+    if(!DB)return Promise.reject();
+    var id="imp_"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    return DB.doc("picks/"+id).set({name:String(o.n).slice(0,30),text:"Added by the organizer from a pick code.",ts:Date.now(),data:o.d});
+  };
+  window.sharedSave=function(){
+    var note=document.getElementById("resultSub");
+    if(!(DB&&UID)){if(note)note.textContent+=" Saved locally on this device.";return}
+    var spent=["F","D","G"].reduce(function(a,k){return a+costOf(k)},0)+((state.sleeper||"").trim()?5:0);
+    var d=JSON.parse(JSON.stringify({E:state.E,W:state.W,cup:state.cup,best:state.best,worst:state.worst,mine:state.mine,pick:{F:getPick("F"),D:getPick("D"),G:getPick("G")},cap:state.cap,sleeper:state.sleeper||"",projectedFantasyPoints:projectedFantasyPoints(),quizScore:+state.quizScore||0,ou:state.ou,hart:state.hart,breakout:state.breakout,surpriseTeam:state.surpriseTeam,coins:spent}));
+    DB.doc("picks/"+UID).set({name:state.name,text:pickText(),ts:Date.now(),data:d}).then(function(){if(note)note.textContent+=" Saved to the live leaderboard."},function(){if(note)note.textContent+=" Couldn't save to the leaderboard, so send your picks by text."});
+  };
+  var bar=document.createElement("div");bar.className="notice";bar.style.display="none";
+  var rc=document.createElement("div");rc.className="notice";rc.style.display="none";
+  var lb=document.getElementById("leaderboard");lb.parentNode.insertBefore(rc,lb);lb.parentNode.insertBefore(bar,rc);
+  function tick(){
+    var dl=+resultsData.deadline||0;
+    if(!dl){bar.style.display="none";return}
+    bar.style.display="block";var ms=dl-Date.now();
+    if(ms<=0){bar.textContent="Picks are closed.";return}
+    bar.textContent="Picks close in "+Math.floor(ms/864e5)+"d "+Math.floor(ms%864e5/36e5)+"h "+Math.floor(ms%36e5/6e4)+"m "+Math.floor(ms%6e4/1e3)+"s";
+  }
+  setInterval(tick,1000);
+  (async function(){
+    try{
+      var db=await claude.use("db"),u=await claude.use("user");
+      if(!db)return;
+      DB=db;UID=u?await u.id():null;window.sharedReady=true;renderLeaderboard();
+      db.collection("picks").onSnapshot(function(sn){picksData={};sn.docs.forEach(function(d){picksData[d.id]=d.data()});renderLeaderboard()},function(){});
+      db.doc("results/season").onSnapshot(function(sn){
+        resultsData=sn.exists?sn.data():{};tick();renderLeaderboard();
+        rc.style.display=resultsData.recap?"block":"none";
+        if(resultsData.recap)rc.textContent="Weekly recap: "+resultsData.recap;
+      },function(){});
+    }catch(e){}
+  })();
+})();
+</script>
+
+<!-- ===== CLAUDE REFINED EXPERIENCE LAYER ===== -->
+<style>
+/* Arena polish + transitions */
+.refine-vignette{position:fixed;inset:0;pointer-events:none;z-index:2999;box-shadow:inset 0 0 120px rgba(0,0,0,.72);opacity:.5}
+.refine-sweep{position:fixed;left:-35vw;top:0;width:28vw;height:100vh;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);transform:skewX(-14deg);pointer-events:none;z-index:2998;animation:refineSweep 7s ease-in-out infinite}
+@keyframes refineSweep{0%,70%{left:-35vw}100%{left:120vw}}
+.refine-pop{animation:refinePop .45s cubic-bezier(.2,.9,.25,1)}
+@keyframes refinePop{0%{opacity:.35;transform:translateY(10px) scale(.985)}100%{opacity:1;transform:none}}
+
+/* Hockey motion */
+.refine-puck{position:fixed;width:13px;height:13px;border-radius:50%;background:#05070b;box-shadow:0 0 0 2px rgba(255,255,255,.16),0 0 18px rgba(255,255,255,.32);pointer-events:none;z-index:5000;animation:refinePuck 1.1s cubic-bezier(.25,.75,.25,1) forwards}
+@keyframes refinePuck{0%{transform:translate(-20px,0) rotate(0);opacity:0}12%{opacity:1}100%{transform:translate(110vw,38vh) rotate(720deg);opacity:0}}
+.refine-stick{position:fixed;width:150px;height:7px;border-radius:8px;background:linear-gradient(90deg,#cfd4dc,#fff,#8d949e);box-shadow:0 0 12px rgba(255,255,255,.2);pointer-events:none;z-index:5000;transform:rotate(-18deg);animation:refineStick 1.25s ease-out forwards}
+@keyframes refineStick{0%{left:-180px;top:82%;opacity:0}15%{opacity:1}100%{left:115%;top:24%;opacity:0;transform:rotate(25deg)}}
+.refine-spark{position:fixed;width:5px;height:5px;border-radius:50%;background:#fff;pointer-events:none;z-index:5001;animation:refineSpark .7s ease-out forwards}
+@keyframes refineSpark{to{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}}
+.refine-flash{position:fixed;inset:0;pointer-events:none;z-index:4999;background:radial-gradient(circle,rgba(255,255,255,.72),rgba(255,255,255,0) 52%);animation:refineFlash .42s ease-out forwards}
+@keyframes refineFlash{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+
+/* Buttons and controls */
+button,.btn,.simbtn{transition:transform .16s ease,filter .16s ease,box-shadow .16s ease}
+button:hover,.btn:hover,.simbtn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+button:active,.btn:active,.simbtn:active{transform:translateY(1px) scale(.98)}
+input:focus,select:focus,textarea:focus{transform:translateY(-1px);box-shadow:0 0 0 3px rgba(56,189,248,.12),0 0 22px rgba(105,183,255,.16)!important}
+
+/* Broadcast feedback */
+.refine-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,18px);z-index:6000;padding:11px 17px;border-radius:999px;background:rgba(8,12,20,.95);color:#fff;font-weight:900;border:1px solid rgba(255,255,255,.18);box-shadow:0 12px 35px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:.22s ease}
+.refine-toast.show{opacity:1;transform:translate(-50%,0)}
+
+</style>
+
+<div class="refine-vignette"></div>
+<div class="refine-sweep"></div>
+<div class="refine-toast" id="refineToast"></div>
+
+
+<script>
+(function(){
+  "use strict";
+  var toast=document.getElementById("refineToast");
+  var booth=document.getElementById("refineCommentary");
+  var boothText=document.getElementById("refineCommentaryText");
+  var tt,bt;
+
+  function showToast(m){
+    if(!toast)return;
+    toast.textContent=m; toast.classList.add("show"); clearTimeout(tt);
+    tt=setTimeout(function(){toast.classList.remove("show")},1800);
+  }
+  var lines=[
+    "AND THAT PICK IS LOCKED IN! 🎙️",
+    "The front office has made its decision!",
+    "OHHH, THAT'S A BOLD ONE!",
+    "The crowd is absolutely buzzing!",
+    "GM MODE: ACTIVATED. 🏒",
+    "That prediction has some serious confidence behind it.",
+    "The scouting department approves. Probably. 😅",
+    "WE HAVE A PREDICTION!"
+  ];
+  function commentary(m){
+    if(!booth)return;
+    boothText.textContent=m||lines[Math.floor(Math.random()*lines.length)];
+    booth.classList.add("show"); clearTimeout(bt);
+    bt=setTimeout(function(){booth.classList.remove("show")},2600);
+  }
+  function puck(){
+    var p=document.createElement("div");p.className="refine-puck";
+    p.style.top=(18+Math.random()*62)+"vh";
+    document.body.appendChild(p);setTimeout(function(){p.remove()},1400);
+  }
+  function stick(){
+    var s=document.createElement("div");s.className="refine-stick";
+    s.style.top=(58+Math.random()*25)+"%";
+    document.body.appendChild(s);setTimeout(function(){s.remove()},1500);
+  }
+  function sparks(x,y,n){
+    for(var i=0;i<n;i++){
+      var s=document.createElement("div");s.className="refine-spark";
+      s.style.left=x+"px";s.style.top=y+"px";
+      s.style.setProperty("--dx",((Math.random()-.5)*90)+"px");
+      s.style.setProperty("--dy",((Math.random()-.5)*90)+"px");
+      document.body.appendChild(s);setTimeout(function(){s.remove()},750);
+    }
+  }
+  function flash(){
+    var f=document.createElement("div");f.className="refine-flash";
+    document.body.appendChild(f);setTimeout(function(){f.remove()},500);
+  }
+
+  document.addEventListener("click",function(e){
+    var el=e.target.closest&&e.target.closest("button,.btn,.simbtn,a");
+    if(!el)return;
+    var label=(el.textContent||"").trim().replace(/\s+/g," ");
+    if(label&&label.length<70)showToast("🏒 "+label);
+
+    if(/enter the arena|drop the puck/i.test(label)){
+      puck();stick();commentary("WELCOME TO THE ARENA — LET'S DROP THE PUCK! 🏒");
+      document.body.classList.add("refine-pop");
+      setTimeout(function(){document.body.classList.remove("refine-pop")},500);
+    }else if(/lock in|reveal|simulate|copy|share|save|start trivia|next question|see result|play again|champion|cup/i.test(label)){
+      puck();
+      if(/lock in|reveal|champion|cup/i.test(label)){puck();sparks(innerWidth*.5,innerHeight*.72,12);flash()}
+      commentary();
+    }else if(Math.random()<.35)puck();
+  },true);
+
+  document.addEventListener("change",function(e){
+    if(e.target&&/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)){
+      sparks(e.clientX||innerWidth/2,e.clientY||innerHeight/2,5);
+      commentary("SCOUTING UPDATE: your prediction board just changed.");
+    }
+  },true);
+
+  setInterval(function(){if(document.visibilityState==="visible")puck()},6500);
+})();
+</script>
+
+<style id="full-rebuild-visuals">
+.arena-main-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:22px}
+.arena-enter.fantasy-enter{background:linear-gradient(135deg,#9b5cff,#26b9ff);box-shadow:0 0 32px rgba(95,160,255,.26)}
+.arena-mode-note{font-size:12px;letter-spacing:.13em;text-transform:uppercase;opacity:.62;margin-top:22px}
+.fantasy-modal{position:fixed;inset:0;z-index:12000;display:none;place-items:center;padding:15px;background:rgba(1,4,12,.88);backdrop-filter:blur(16px)}
+.fantasy-modal.show{display:grid}
+.fantasy-modal-box{width:min(1100px,97vw);max-height:94vh;overflow:auto;position:relative;padding:clamp(18px,3vw,34px);border-radius:28px;background:radial-gradient(circle at 5% 0,rgba(60,190,255,.14),transparent 32%),radial-gradient(circle at 95% 18%,rgba(145,80,255,.15),transparent 28%),linear-gradient(145deg,#071320,#102239 56%,#101329);border:1px solid rgba(135,210,255,.22);box-shadow:0 30px 100px rgba(0,0,0,.68),0 0 60px rgba(60,150,255,.12)}
+.fantasy-modal-box>h2{font-size:clamp(2.2rem,5vw,4.3rem);margin:5px 0 8px;letter-spacing:-.04em}
+.fantasy-close{position:absolute;right:16px;top:16px;width:40px;height:40px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;font-size:18px;cursor:pointer;z-index:2}
+.fantasy-core{margin:18px 0!important;background:rgba(5,13,24,.66)!important;border-color:rgba(255,255,255,.1)!important}
+.fantasy-lab{margin-top:16px;padding:17px;border:1px solid rgba(150,205,255,.13);border-radius:20px;background:linear-gradient(135deg,rgba(45,180,255,.08),rgba(160,90,255,.08))}
+.fantasy-lab-title{font-size:11px;font-weight:950;letter-spacing:.18em;color:#91d8ff}
+.fantasy-lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0 14px}
+.fantasy-lab-card{padding:14px;border-radius:15px;background:rgba(2,8,17,.46);border:1px solid rgba(255,255,255,.08)}
+.fantasy-lab-card b{display:block;font-size:12px}.fantasy-lab-card strong{display:block;font-size:26px;margin-top:6px;letter-spacing:-.04em}.fantasy-lab-card span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.fantasy-strategy{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.fantasy-strategy>span{font-size:10px;letter-spacing:.12em;font-weight:950;color:#9bb1c9;margin-right:3px}.fantasy-strategy button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text);padding:9px 12px;border-radius:11px;font-weight:850;cursor:pointer}.fantasy-strategy button.selected{border-color:#54c9ff;background:rgba(45,170,255,.18);box-shadow:0 0 18px rgba(45,170,255,.12)}.fantasy-strategy strong{flex-basis:100%;color:#b0c6dc;font-size:12px;margin-top:4px}
+.fantasy-rink-strip{display:flex;align-items:center;gap:10px;margin-top:17px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);font-size:9px;letter-spacing:.13em;color:#819bb5}.fantasy-rink-strip i{flex:1;height:3px;border-radius:9px;background:linear-gradient(90deg,#44d7ff,#9a73ff,#44d7ff);background-size:200% 100%;animation:fantasyGlide 2.5s linear infinite}
+@keyframes fantasyGlide{to{background-position:200% 0}}
+.fantasy-modal-actions{display:flex;justify-content:flex-end;margin-top:14px}
+.dna-clean{grid-template-columns:repeat(4,minmax(0,1fr))!important}.dna-clean .dna-card{background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(125,190,255,.12);border-radius:16px}.dna-clean .dna-card strong{display:block;margin-top:5px;font-size:25px}.dna-verdict{margin-top:13px;padding:13px 15px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;color:var(--muted);font-weight:800}
+.modern-pred-card{overflow:hidden;position:relative;padding:20px;border:1px solid rgba(112,196,255,.24);border-radius:22px;background:radial-gradient(circle at 92% 0,rgba(64,177,255,.2),transparent 30%),radial-gradient(circle at 6% 100%,rgba(151,89,255,.12),transparent 35%),linear-gradient(140deg,#071729,#0d2139 60%,#10142b);box-shadow:0 18px 40px rgba(0,0,0,.2)}
+.modern-card-top{display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap;font-size:9px;letter-spacing:.15em;font-weight:950;color:#89caff}
+.modern-card-title{font-size:clamp(1.5rem,4vw,2.6rem);font-weight:1000;letter-spacing:-.04em;margin-top:22px}.modern-card-sub{font-size:12px;color:#a6bbcf;margin-top:3px}
+.modern-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:18px}.modern-card-grid>div,.modern-card-bottom>div{padding:12px;border:1px solid rgba(255,255,255,.08);border-radius:13px;background:rgba(1,7,16,.28);min-width:0}
+.modern-card-grid span,.modern-card-bottom span{display:block;color:#8da5bf;font-size:9px;font-weight:950;letter-spacing:.1em}.modern-card-grid b,.modern-card-bottom b{display:block;margin-top:7px;font-size:13px;overflow-wrap:anywhere}
+.modern-card-bottom{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:9px}
+.kept-experience{display:grid;gap:16px;margin-top:18px;background:transparent!important;border:0!important;padding:0!important}
+.upset-hero{display:flex;align-items:center;gap:17px;padding:18px;border-radius:17px;border:1px solid rgba(255,90,110,.22);background:linear-gradient(100deg,rgba(255,58,90,.1),rgba(255,178,65,.04));position:relative;overflow:hidden}
+.upset-light{width:11px;height:50px;border-radius:20px;background:#ff5369;box-shadow:0 0 22px rgba(255,60,90,.65);animation:alertPulse 1.6s ease-in-out infinite}
+@keyframes alertPulse{50%{opacity:.25;box-shadow:0 0 2px rgba(255,60,90,.2)}}
+.upset-copy{flex:1}.upset-copy strong{font-size:18px;letter-spacing:.08em;color:#ff8795}.upset-copy p{margin:5px 0 0;color:var(--muted);font-size:13px}.upset-signal{font-size:40px;font-weight:1000;color:rgba(255,105,125,.45)}
+.draft{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.draft-board{min-height:145px;padding:12px;border:1px solid rgba(115,187,255,.14);background:rgba(1,8,17,.34);border-radius:16px}.draft-actions{display:grid;gap:8px;align-content:start}.draft-actions button{width:100%;text-align:left}.draft-pick{display:flex;align-items:center;gap:10px;padding:10px;border-bottom:1px solid rgba(255,255,255,.07)}.draft-pick:last-child{border-bottom:0}.pick-num{width:27px;height:27px;display:grid;place-items:center;background:rgba(73,174,255,.14);border-radius:8px;font-size:12px;font-weight:950;color:#9edaff}
+.result{border-color:rgba(70,205,157,.2)!important;box-shadow:0 10px 35px rgba(0,0,0,.1)}
+@media(max-width:700px){.fantasy-lab-grid,.modern-card-grid,.modern-card-bottom,.dna-clean{grid-template-columns:repeat(2,minmax(0,1fr))!important}.draft{grid-template-columns:1fr}.arena-main-actions{flex-direction:column;align-items:center}.arena-main-actions button{width:min(330px,88vw)}.modern-card-grid b,.modern-card-bottom b{font-size:12px}}
+@media(max-width:420px){.fantasy-strategy button{flex:1}.fantasy-rink-strip{font-size:7px}.modern-card-grid,.modern-card-bottom{grid-template-columns:1fr!important}}
+</style>
+
+
+<script id="full-rebuild-controller">
+(function(){
+  const $=id=>document.getElementById(id);
+  let dnaUnlocked = (typeof state !== "undefined" && !!state.locked);
+  let draft = [];
+
+  function selectedTeamCodes(){
+    if(typeof state === "undefined") return [];
+    return [...new Set([...(state.E||[]),...(state.W||[])])];
+  }
+  function niceTeam(code){
+    return (typeof teamName === "function" ? teamName(code) : code) || code;
+  }
+  function getDNA(){
+    const text = (typeof state !== "undefined"
+      ? [state.bold,state.cup,state.best,state.worst,state.mine,state.hart,state.breakout,state.surpriseTeam].join(" ")
+      : "").toLowerCase();
+    const picked = selectedTeamCodes();
+    const risky = (text.match(/dark horse|upset|surprise|bold|breakout|wild card|underdog/g)||[]).length;
+    return {
+      analysis: Math.max(0, Math.min(99, picked.length * 6 + (state && state.cup ? 14 : 0) + (state && state.best ? 10 : 0))),
+      boldness: Math.max(0, Math.min(99, 18 + risky * 17 + ((state && state.bold) ? 18 : 0))),
+      risk: Math.max(0, Math.min(99, 20 + risky * 19 + (state && state.worst && state.worst === state.cup ? 25 : 0))),
+      contender: Math.max(0, Math.min(99, 20 + (state && state.cup ? 22 : 0) + (state && state.best ? 18 : 0) + picked.length * 3))
+    };
+  }
+  function renderDNA(){
+    const labels=[["dnaAnalysis","analysis"],["dnaBold","boldness"],["dnaRisk","risk"],["dnaContender","contender"]];
+    if(!dnaUnlocked){
+      labels.forEach(([id])=>{const node=$(id);if(node)node.textContent="0%";const bar=node&&node.parentElement.querySelector(".meter i");if(bar)bar.style.width="0%"});
+      if($("dnaStatus"))$("dnaStatus").textContent="LOCKED · 0%";
+      if($("dnaVerdict"))$("dnaVerdict").textContent="Submit your picks to reveal your GM identity.";
+      if($("cardDNA"))$("cardDNA").textContent="0%";
+      if($("predName"))$("predName").textContent="YOUR GM PROFILE";
+      if($("predCardSub"))$("predCardSub").textContent="Lock in your picks to generate your card.";
+      return;
+    }
+    const d=getDNA();
+    labels.forEach(([id,key])=>{const node=$(id);if(node)node.textContent=d[key]+"%";const bar=node&&node.parentElement.querySelector(".meter i");if(bar)bar.style.width=d[key]+"%"});
+    const avg=Math.round((d.analysis+d.boldness+d.risk+d.contender)/4);
+    let title="THE CALCULATED GM";
+    if(d.boldness>=75&&d.risk>=65)title="THE FEARLESS PREDICTOR";
+    else if(d.analysis>=70&&d.contender>=70)title="THE DATA-DRIVEN GM";
+    else if(d.contender>=70)title="THE CUP CONTENDER";
+    else if(d.boldness>=65)title="THE BOLD PREDICTOR";
+    $("dnaStatus").textContent="UNLOCKED · "+avg+"%";
+    $("dnaVerdict").textContent=title+" — profile generated from your submitted picks.";
+    $("predName").textContent=title;
+    $("predCardSub").textContent="GM rating "+avg+"% · 2026–27 season card";
+    $("cardDNA").textContent=avg+"%";
+  }
+  function updatePredictionCard(){
+    if(!dnaUnlocked || typeof state==="undefined") return;
+    if($("cardCup"))$("cardCup").textContent=niceTeam(state.cup)||"Not selected";
+    if($("cardBest"))$("cardBest").textContent=niceTeam(state.best)||"Not selected";
+    if($("cardMine"))$("cardMine").textContent=niceTeam(state.mine)||"Not selected";
+    if($("cardFantasy"))$("cardFantasy").textContent=[(typeof getPick==="function"&&getPick("F"))||"Forward not selected",(typeof getPick==="function"&&getPick("D"))||"Defense not selected",(typeof getPick==="function"&&getPick("G"))||"Goalie not selected"].join(" • ")+" · "+(typeof projectedFantasyPoints==="function"?projectedFantasyPoints():0)+" projected pts";
+    if($("cardSuperlative"))$("cardSuperlative").textContent=[
+      state.hart||"Hart: —",
+      state.breakout||"Breakout: —",
+      state.surpriseTeam||"Surprise: —"
+    ].join(" • ");
+    if($("cardBold"))$("cardBold").textContent=state.bold||"No bold prediction";
+  }
+  window.unlockPredictionDNA=function(){
+    dnaUnlocked=true;
+    renderDNA();
+    updatePredictionCard();
+    updateUpsetAlert();
+  };
+  function updateUpsetAlert(){
+    if(!$("upsetBadge")||typeof state==="undefined"||!state.locked)return;
+    const text=String(state.bold||"").toLowerCase();
+    const isBold=/upset|dark horse|surprise|wild card|nobody expects|shocks|stun|miss the playoffs|win the cup/.test(text);
+    $("upsetBadge").textContent=isBold?"ALERT ACTIVE":"PICKS LOCKED";
+    $("upsetTitle").textContent=isBold?"🚨 UPSET ALERT: FULL BLAST":"🚨 UPSET WATCH";
+    $("upsetText").textContent=isBold
+      ?"Your bold prediction is locked in. The league has officially been put on notice."
+      :"Your predictions are locked. Add a bold pick next time to send the alert level soaring.";
+  }
+  function refreshDraft(){
+    const board=$("draftBoard"),actions=$("draftActions");
+    if(!board||!actions||typeof state==="undefined")return;
+    const available=selectedTeamCodes().filter(code=>!draft.includes(code));
+    actions.innerHTML=available.map(code=>`<button type="button" class="simbtn draft-add" data-team="${String(code).replace(/"/g,"&quot;")}">＋ Draft ${niceTeam(code)}</button>`).join("") || '<div class="muted">Choose playoff teams above to make your draft board.</div>';
+    actions.querySelectorAll(".draft-add").forEach(button=>button.addEventListener("click",()=>{
+      if(draft.length>=5)return;
+      draft.push(button.dataset.team);
+      renderDraftBoard();
+      refreshDraft();
+    }));
+    renderDraftBoard();
+  }
+  function renderDraftBoard(){
+    const board=$("draftBoard");if(!board)return;
+    board.innerHTML=draft.length
+      ? draft.map((code,i)=>`<div class="draft-pick"><span class="pick-num">${i+1}</span><b>${niceTeam(code)}</b><button type="button" class="draft-remove simbtn" data-remove="${code}" style="margin-left:auto;padding:5px 9px">Remove</button></div>`).join("")
+      : '<div class="muted">Your draft board is empty. Choose a team to start.</div>';
+    board.querySelectorAll("[data-remove]").forEach(button=>button.addEventListener("click",()=>{
+      draft=draft.filter(x=>x!==button.dataset.remove);refreshDraft();
+    }));
+  }
+  function updateFantasyLab(){
+    const baseSpent = typeof costOf==="function" ? ["F","D","G"].reduce((sum,k)=>sum+costOf(k),0) : 0;
+    const spent = baseSpent + ((typeof state!=="undefined" && (state.sleeper||"").trim()) ? 5 : 0);
+    const picksComplete = typeof getPick==="function" ? ["F","D","G"].filter(k=>!!getPick(k)).length : 0;
+    const capSelected = typeof state!=="undefined" && !!state.cap;
+    if($("fantasySalaryLeft"))$("fantasySalaryLeft").textContent=String(Math.max(0,100-spent));
+    if($("fantasyCaptainBoost"))$("fantasyCaptainBoost").textContent=capSelected?"2×":"—";
+    if($("fantasyRating"))$("fantasyRating").textContent=Math.min(99,Math.round(picksComplete/3*65+(capSelected?25:0)+(spent<=100?10:0)))+"%";
+    if($("fantasyProjectedPoints"))$("fantasyProjectedPoints").textContent=(typeof projectedFantasyPoints==="function"?projectedFantasyPoints():0)+" pts";
+  }
+  const modal=$("fantasyModal");
+  function openFantasy(){modal?.classList.add("show");modal?.setAttribute("aria-hidden","false");updateFantasyLab();}
+  function closeFantasy(){modal?.classList.remove("show");modal?.setAttribute("aria-hidden","true");updateFantasyLab();}
+  $("fantasyOpen")?.addEventListener("click",openFantasy);
+  $("fantasyClose")?.addEventListener("click",closeFantasy);
+  $("fantasyDone")?.addEventListener("click",closeFantasy);
+  modal?.addEventListener("click",e=>{if(e.target===modal)closeFantasy()});
+  $("arenaEnter")?.addEventListener("click",()=>{$("arenaIntro")?.classList.add("hide")});
+  document.querySelectorAll("[data-fstrategy]").forEach(button=>button.addEventListener("click",()=>{
+    const label={POWER:"Attack scoring upside and trust your stars.",BALANCED:"Mix proven scorers with steady value.",VALUE:"Stretch your coins and hunt for breakout value."};
+    $("fantasyStrategyText").textContent=label[button.dataset.fstrategy]||"Strategy selected.";
+    document.querySelectorAll("[data-fstrategy]").forEach(x=>x.classList.toggle("selected",x===button));
+  }));
+  document.addEventListener("click",()=>setTimeout(()=>{refreshDraft();updateFantasyLab();renderDNA();updatePredictionCard()},0));
+  document.addEventListener("input",()=>setTimeout(()=>{updateFantasyLab();updatePredictionCard()},0));
+  document.addEventListener("change",()=>setTimeout(()=>{refreshDraft();updateFantasyLab();updatePredictionCard()},0));
+  renderDNA();updatePredictionCard();refreshDraft();updateFantasyLab();
+})();
+</script>
+
+
+<style id="fantasy-expansion-style">
+.fantasy-lab-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.fantasy-extra{margin-top:16px;border:1px solid rgba(100,190,255,.13);border-radius:17px;padding:15px;background:rgba(2,8,18,.25)}
+.fantasy-extra-title{color:#8fd7ff;font-weight:950;font-size:11px;letter-spacing:.16em;margin-bottom:10px}
+.fantasy-extra-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.fantasy-extra-grid>div{padding:12px;border-radius:12px;background:rgba(255,255,255,.04)}
+.fantasy-extra-grid b{display:block;font-size:12px}.fantasy-extra-grid span{display:block;color:#9eb0c5;font-size:11px;margin-top:4px}
+#startAgain{border-color:rgba(255,255,255,.16)}
+@media(max-width:760px){.fantasy-lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fantasy-extra-grid{grid-template-columns:1fr}}
+</style>
+
+
+<script id="fantasy-presets-controller">
+(function(){
+  const $=id=>document.getElementById(id);
+  const presets={
+    power:{F:"Connor McDavid",D:"Evan Bouchard",G:"Jake Oettinger",cap:"F"},
+    balanced:{F:"Nathan MacKinnon",D:"Miro Heiskanen",G:"Ilya Sorokin",cap:"F"},
+    value:{F:"Connor Bedard",D:"Adam Fox",G:"Logan Thompson",cap:"F"},
+    blueline:{F:"Leon Draisaitl",D:"Cale Makar",G:"Jeremy Swayman",cap:"D"},
+    goalie:{F:"Auston Matthews",D:"Zach Werenski",G:"Connor Hellebuyck",cap:"G"}
+  };
+  function applyLineup(lineup,label){
+    if(typeof state==="undefined")return;
+    state.pick={F:lineup.F,D:lineup.D,G:lineup.G};
+    state.custom={F:"",D:"",G:""};
+    state.cap=lineup.cap||"F";
+    ["F","D","G"].forEach(k=>{const field=$("custom"+k);if(field)field.value="";});
+    if($("sleeper"))$("sleeper").value=state.sleeper||"";
+    if(typeof renderFantasy==="function")renderFantasy();
+    if(typeof updateFantasy==="function")updateFantasy();
+    if(typeof updateProgress==="function")updateProgress();
+    if(typeof autoSave==="function")autoSave();
+    if($("fantasyBuildStatus"))$("fantasyBuildStatus").textContent="✅ "+label+" loaded. Change any player below to make it yours.";
+    updateOuterStats();
+    document.querySelectorAll("[data-preset]").forEach(b=>b.classList.toggle("active",presets[b.dataset.preset]&&b.dataset.preset===label.toLowerCase().split(" ")[0]));
+  }
+  function updateOuterStats(){
+    const p=typeof projectedFantasyPoints==="function"?projectedFantasyPoints():0;
+    if($("fantasyProjectedPoints"))$("fantasyProjectedPoints").textContent=p+" pts";
+    const cap=typeof state!=="undefined"?state.cap:"";
+    if($("fantasyCaptainBoost"))$("fantasyCaptainBoost").textContent=cap?({F:"FWD · 2×",D:"DEF · 2×",G:"G · 2×"}[cap]||"2×"):"—";
+    if($("fantasySalaryLeft")&&typeof costOf==="function"){
+      const spent=["F","D","G"].reduce((sum,k)=>sum+costOf(k),0)+((state.sleeper||"").trim()?5:0);
+      $("fantasySalaryLeft").textContent=Math.max(0,100-spent);
+    }
+    if($("fantasyRating")&&typeof getPick==="function"){
+      const count=["F","D","G"].filter(k=>getPick(k)).length;
+      const spent=["F","D","G"].reduce((sum,k)=>sum+costOf(k),0)+((state.sleeper||"").trim()?5:0);
+      $("fantasyRating").textContent=Math.min(99,Math.round(count/3*70+(state.cap?20:0)+(spent<=100?10:0)))+"%";
+    }
+  }
+  document.querySelectorAll("[data-preset]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      const p=presets[button.dataset.preset];
+      if(!p)return;
+      applyLineup(p,button.querySelector("b")?.textContent||"Preset");
+      document.querySelectorAll("[data-preset]").forEach(b=>b.classList.toggle("active",b===button));
+    });
+  });
+  $("fantasyAutoDraft")?.addEventListener("click",()=>{
+    if(typeof DATA==="undefined"||typeof FANTASY_PROJECTIONS==="undefined")return;
+    let best=null,bestScore=-Infinity;
+    for(const f of DATA.P.F)for(const d of DATA.P.D)for(const g of DATA.P.G){
+      const cost=f[1]+d[1]+g[1];
+      if(cost>100)continue;
+      const pts=[["F",f[0]],["D",d[0]],["G",g[0]]];
+      for(const cap of ["F","D","G"]){
+        const score=pts.reduce((total,item)=>total+(FANTASY_PROJECTIONS[item[1]]||({F:48,D:30,G:36}[item[0]]))*(item[0]===cap?2:1),0);
+        if(score>bestScore){bestScore=score;best={F:f[0],D:d[0],G:g[0],cap};}
+      }
+    }
+    if(best)applyLineup(best,"Auto-Draft Best Lineup");
+  });
+  $("fantasyStarterReset")?.addEventListener("click",()=>applyLineup(presets.power,"Starter Lineup"));
+  $("fantasyRandom")?.addEventListener("click",()=>{
+    if(typeof DATA==="undefined")return;
+    const pickRandom=a=>a[Math.floor(Math.random()*a.length)];
+    let options=[];
+    for(const f of DATA.P.F)for(const d of DATA.P.D)for(const g of DATA.P.G){
+      if(f[1]+d[1]+g[1]<=100)options.push({F:f[0],D:d[0],G:g[0],cap:["F","D","G"][Math.floor(Math.random()*3)]});
+    }
+    if(options.length)applyLineup(pickRandom(options),"Random Affordable Lineup");
+  });
+  // Both the Fantasy modal and the final-picks Start Again control can bring users back home.
+  $("fantasyHome")?.addEventListener("click",()=>{
+    $("fantasyModal")?.classList.remove("show");
+    $("fantasyModal")?.setAttribute("aria-hidden","true");
+    $("arenaIntro")?.classList.remove("hide");
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+  // Ensure the Fantasy projection cards reflect the starter lineup on first load.
+  document.addEventListener("DOMContentLoaded",updateOuterStats);
+  setTimeout(updateOuterStats,250);
+})();
+</script>
+
+
+<style id="fantasy-rebuild-skin">
+.fantasy-presets{margin:15px 0 18px;padding:16px;border-radius:20px;background:linear-gradient(135deg,rgba(32,149,227,.09),rgba(125,79,230,.08));border:1px solid rgba(100,186,255,.16)}
+.fantasy-section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.fantasy-section-head h3{margin:3px 0 0;font-size:clamp(18px,3vw,23px)}
+.fantasy-eyebrow{font-size:10px;font-weight:950;letter-spacing:.17em;color:#8bd4ff}
+.fantasy-mini-badge{font-size:9px;letter-spacing:.1em;font-weight:900;padding:7px 9px;border-radius:99px;background:rgba(64,178,255,.12);color:#9edcff;border:1px solid rgba(89,190,255,.2)}
+.fantasy-preset-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.fantasy-preset{min-width:0;min-height:144px;padding:12px 10px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:7px;border:1px solid rgba(255,255,255,.09);border-radius:15px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(0,0,0,.15));color:var(--text);cursor:pointer;transition:transform .18s,border-color .18s,background .18s}
+.fantasy-preset:hover{transform:translateY(-3px);border-color:rgba(86,197,255,.6);background:rgba(50,145,220,.1)}
+.fantasy-preset.active{border-color:#56c7ff;background:linear-gradient(145deg,rgba(39,163,255,.18),rgba(124,91,245,.13));box-shadow:0 0 0 1px rgba(86,199,255,.14),0 8px 25px rgba(0,0,0,.15)}
+.fantasy-preset .fp-icon{font-size:24px}.fantasy-preset b{font-size:12px;line-height:1.25}.fantasy-preset small{font-size:10px;color:var(--muted);line-height:1.4}.fantasy-preset .fp-meta{font-size:9px;font-weight:900;color:#90d5ff;margin-top:auto}
+.fantasy-action-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.fantasy-action{padding:10px 13px;border-radius:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:var(--text);font-size:11px;font-weight:900;cursor:pointer;transition:.18s}
+.fantasy-action:hover{transform:translateY(-2px);border-color:rgba(89,195,255,.6)}
+.fantasy-action.primary{background:linear-gradient(135deg,#168ee6,#7556e8);border-color:transparent;color:#fff}
+.fantasy-build-status{margin-top:10px;padding:10px 12px;border-radius:11px;background:rgba(0,0,0,.14);color:var(--muted);font-size:11px}
+.playergrid button{display:flex!important;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;text-align:left!important;min-height:67px}
+.playergrid .player-name{font-weight:850;line-height:1.25}
+.playergrid .player-meta{display:flex;justify-content:space-between;gap:7px;width:100%;color:var(--muted);font-size:10px;font-weight:700}
+.fantasy-modal-actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:16px}
+.fantasy-modal-actions button{min-width:150px}
+.home-btn{border:1px solid rgba(94,188,255,.25)!important;background:rgba(43,132,204,.13)!important;color:var(--text)!important}
+#startAgain{font-weight:950;min-height:43px}
+@media(max-width:900px){.fantasy-preset-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.fantasy-preset-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fantasy-preset{min-height:126px}.fantasy-action-row{display:grid;grid-template-columns:1fr}.fantasy-section-head{align-items:flex-start}.fantasy-modal-actions button{flex:1}}
+
+
+<style id="fantasy-extreme-style">
+#arenaUtilityNav{position:fixed;top:14px;left:14px;z-index:10020;display:none;gap:8px}
+#arenaUtilityNav button{border:1px solid rgba(117,197,255,.3);border-radius:13px;padding:10px 13px;background:rgba(5,13,25,.92);color:#eff9ff;backdrop-filter:blur(12px);font-size:11px;font-weight:950;letter-spacing:.07em;cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,.24)}
+#arenaUtilityNav button:hover{transform:translateY(-2px);border-color:#69c8ff}
+#fantasyFlashMessage{position:fixed;left:50%;top:14%;transform:translate(-50%,-15px);z-index:12050;opacity:0;pointer-events:none;max-width:90vw;text-align:center;padding:13px 18px;border:1px solid rgba(103,203,255,.35);border-radius:15px;background:rgba(5,14,28,.96);color:#f5fbff;font-weight:900;box-shadow:0 15px 40px rgba(0,0,0,.4);transition:.25s}
+#fantasyFlashMessage.show{opacity:1;transform:translate(-50%,0)}
+.fx-control-room{margin:18px 0;padding:17px;border:1px solid rgba(94,190,255,.18);border-radius:22px;background:radial-gradient(circle at 0 0,rgba(50,170,255,.08),transparent 34%),linear-gradient(150deg,rgba(2,10,20,.42),rgba(23,20,48,.34))}
+.fx-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.fx-section-heading small{color:#8bd4ff;font-size:10px;font-weight:950;letter-spacing:.16em}
+.fx-section-heading h3{font-size:22px;margin:4px 0 0}.fx-section-heading>span{font-size:9px;letter-spacing:.1em;padding:7px 9px;border-radius:99px;color:#9edcff;background:rgba(64,178,255,.12)}
+.fx-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.fx-metrics>div{padding:13px;border-radius:15px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.075);min-width:0}
+.fx-metrics small{display:block;font-size:9px;letter-spacing:.13em;font-weight:950;color:#91cfff}
+.fx-metrics b{display:block;font-size:25px;margin:7px 0 3px;overflow-wrap:anywhere}.fx-metrics span{display:block;font-size:10px;color:var(--muted)}
+.fx-metrics i{display:block;height:5px;background:rgba(255,255,255,.08);border-radius:99px;margin-top:10px;overflow:hidden}.fx-metrics em{display:block;height:100%;width:0;background:linear-gradient(90deg,#39d4ff,#a17dff,#ff7bac);transition:width .5s}
+.fx-tool{margin-top:12px;padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:17px;background:rgba(1,7,17,.27)}
+.fx-tool h4{font-weight:950;font-size:13px;margin:0 0 10px}.fx-tool h4 small{font-size:10px;color:var(--muted);font-weight:600;margin-left:5px}
+.fx-slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.fx-slots>div{display:grid;gap:7px;padding:11px;border:1px solid rgba(111,188,255,.13);border-radius:13px;background:rgba(255,255,255,.025)}
+.fx-slots b{font-size:10px;color:#8dd5ff}.fx-slots span{font-size:10px;color:var(--muted);min-height:24px;overflow-wrap:anywhere}
+.fx-slots button,.fx-actions button,.fx-results button{padding:8px 10px;border-radius:9px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:var(--text);cursor:pointer;font-size:10px;font-weight:900}
+.fx-slots button:disabled{opacity:.3;cursor:not-allowed}
+.fx-actions{display:flex;gap:8px;flex-wrap:wrap}.fx-actions button:first-child{background:linear-gradient(135deg,#168ee6,#7556e8);color:white;border-color:transparent}
+.fx-results{display:grid;gap:8px;margin-top:11px;font-size:11px;color:var(--muted)}.fx-result-row{display:grid;grid-template-columns:1.2fr .7fr .7fr auto;gap:8px;align-items:center;padding:10px;border:1px solid rgba(255,255,255,.07);border-radius:11px;background:rgba(255,255,255,.025);color:var(--text)}
+.fx-result-row small{display:block;color:var(--muted);margin-top:2px}.fx-result-row b{font-size:11px}
+.fx-results table{width:100%;border-collapse:collapse;font-size:11px}.fx-results th,.fx-results td{text-align:left;padding:8px;border-bottom:1px solid rgba(255,255,255,.08)}.fx-results th{font-size:9px;color:var(--muted);letter-spacing:.1em}
+.fx-score{display:flex;align-items:center;justify-content:center;gap:clamp(8px,3vw,25px);padding:16px;margin-top:12px;border-radius:14px;background:linear-gradient(120deg,rgba(25,140,220,.12),rgba(130,82,225,.12));border:1px solid rgba(108,192,255,.12)}
+.fx-score span{font-size:10px;letter-spacing:.12em;font-weight:950;color:#9bcfff}.fx-score b{font-size:clamp(23px,5vw,36px)}.fx-score em{font-style:normal;color:var(--muted);font-size:10px}
+.fx-comment{text-align:center;color:var(--muted);font-size:11px;padding:9px}
+.fx-achievements{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.fx-achievement{padding:11px;border-radius:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025);opacity:.45}
+.fx-achievement.unlocked{opacity:1;border-color:rgba(96,218,171,.3);background:rgba(35,170,120,.08)}
+.fx-achievement span{font-size:21px;display:block}.fx-achievement b{font-size:10px;display:block;margin-top:5px}.fx-achievement small{display:block;color:var(--muted);font-size:9px;margin-top:4px}
+.fx-scouts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.fx-scout-card{padding:11px;border-radius:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025)}
+.fx-scout-card h5{font-size:11px;margin:0 0 7px;color:#8dd5ff}.fx-scout-card div{display:flex;justify-content:space-between;gap:6px;border-bottom:1px solid rgba(255,255,255,.05);padding:6px 0;font-size:10px}.fx-scout-card div:last-child{border-bottom:0}.fx-scout-card b{font-size:10px}
+.fx-note{font-size:10px;color:var(--muted);margin-bottom:0}
+@media(max-width:800px){.fx-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.fx-achievements{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#arenaUtilityNav{left:8px;top:8px}#arenaUtilityNav button{padding:8px 9px;font-size:10px}.fx-slots,.fx-scouts{grid-template-columns:1fr}.fx-result-row{grid-template-columns:1fr 1fr}.fx-section-heading h3{font-size:18px}}
+</style>
+
+
+<script id="fantasy-extreme-controller">
+(function(){
+  const $=id=>document.getElementById(id), key="nhl_fantasy_roster_slots_2026_27";
+  let rivalSeed=Math.floor(Math.random()*1000)+1;
+  const presets={
+    power:{F:"Connor McDavid",D:"Evan Bouchard",G:"Jake Oettinger",cap:"F"},
+    balanced:{F:"Nathan MacKinnon",D:"Miro Heiskanen",G:"Ilya Sorokin",cap:"F"},
+    value:{F:"Connor Bedard",D:"Adam Fox",G:"Logan Thompson",cap:"F"},
+    blueline:{F:"Leon Draisaitl",D:"Cale Makar",G:"Jeremy Swayman",cap:"D"},
+    goalie:{F:"Auston Matthews",D:"Zach Werenski",G:"Connor Hellebuyck",cap:"G"}
+  };
+  function toast(msg){
+    const e=$("fantasyFlashMessage");if(!e)return;e.textContent=msg;e.classList.add("show");
+    if(window.__fxToast)clearTimeout(window.__fxToast);window.__fxToast=setTimeout(()=>e.classList.remove("show"),2300);
+  }
+  function projection(name,role){return (typeof FANTASY_PROJECTIONS!=="undefined"&&FANTASY_PROJECTIONS[name])||({F:48,D:30,G:36}[role]||0)}
+  function price(name,role){if(typeof DATA==="undefined"||!DATA.P||!DATA.P[role])return 10;const p=DATA.P[role].find(x=>x[0]===name);return p?+p[1]:10}
+  function lineup(){return {F:typeof getPick==="function"?getPick("F"):"",D:typeof getPick==="function"?getPick("D"):"",G:typeof getPick==="function"?getPick("G"):"",cap:typeof state!=="undefined"?state.cap:"F",sleeper:typeof state!=="undefined"?state.sleeper||"":""}}
+  function budget(){return typeof costOf==="function"?["F","D","G"].reduce((n,k)=>n+costOf(k),0)+((state.sleeper||"").trim()?5:0):0}
+  function points(l){return ["F","D","G"].reduce((n,k)=>n+projection(l[k],k)*(l.cap===k?2:1),0)+(l.sleeper?18:0)}
+  function slotData(){try{return JSON.parse(localStorage.getItem(key)||"{}")}catch(e){return {}}}
+  function renderSlots(){const d=slotData();[1,2,3].forEach(n=>{if($("fxSlotStatus"+n))$("fxSlotStatus"+n).textContent=d[n]?[d[n].F,d[n].D,d[n].G].filter(Boolean).join(" · "):"Empty vault";const b=document.querySelector('[data-fx-load="'+n+'"]');if(b)b.disabled=!d[n]})}
+  function update(){
+    const l=lineup(),filled=["F","D","G"].filter(k=>l[k]).length,cost=budget(),pts=points(l),chem=Math.min(100,Math.round(filled/3*70+(l.cap?15:0)+(cost<=100?15:0))),value=cost?pts/cost:0,gm=Math.min(99,Math.round(chem*.55+Math.min(100,value*10)*.25+(filled===3?12:0)));
+    if($("fxChemistry"))$("fxChemistry").textContent=chem+"%";if($("fxChemistryNote"))$("fxChemistryNote").textContent=filled===3?"Full lineup selected":filled+"/3 roles filled";if($("fxChemistryBar"))$("fxChemistryBar").style.width=chem+"%";
+    if($("fxValue"))$("fxValue").textContent=value.toFixed(2);if($("fxValueBar"))$("fxValueBar").style.width=Math.min(100,value*10)+"%";
+    if($("fxCaptain"))$("fxCaptain").textContent=({F:"FORWARD 2×",D:"DEFENSE 2×",G:"GOALIE 2×"}[l.cap]||"—");if($("fxCaptainNote"))$("fxCaptainNote").textContent=l.cap?"Double-points captain selected":"Choose a captain";
+    if($("fxGM"))$("fxGM").textContent=gm;if($("fxGMNote"))$("fxGMNote").textContent=cost<=100?"Within salary cap":"Over budget — make a swap";
+    if($("fantasyProjectedPoints"))$("fantasyProjectedPoints").textContent=pts+" pts";if($("fantasySalaryLeft"))$("fantasySalaryLeft").textContent=Math.max(0,100-cost);if($("fantasyRating"))$("fantasyRating").textContent=chem+"%";if($("fantasyCaptainBoost"))$("fantasyCaptainBoost").textContent=l.cap?({F:"FWD · 2×",D:"DEF · 2×",G:"G · 2×"}[l.cap]):"—";
+    renderSlots();achievements();scout();
+  }
+  function apply(l,label){
+    if(typeof state==="undefined")return;state.pick={F:l.F||"",D:l.D||"",G:l.G||""};state.custom={F:"",D:"",G:""};state.cap=l.cap||"F";state.sleeper=l.sleeper||"";
+    ["F","D","G"].forEach(k=>{if($("custom"+k))$("custom"+k).value=""});if($("sleeper"))$("sleeper").value=state.sleeper;
+    if(typeof renderFantasy==="function")renderFantasy();if(typeof updateFantasy==="function")updateFantasy();if(typeof updateProgress==="function")updateProgress();if(typeof autoSave==="function")autoSave();
+    if($("fantasyBuildStatus"))$("fantasyBuildStatus").textContent="✅ "+label+" loaded. Customize any selection below.";
+    document.querySelectorAll("[data-preset]").forEach(b=>b.classList.remove("active"));update();toast(label+" loaded!");
+  }
+  function achievements(){
+    const l=lineup(),d=slotData(),complete=["F","D","G"].every(k=>!!l[k]),hasPreset=!!document.querySelector("[data-preset].active");
+    const items=[["🚀","Full Line","Fill all three roles",complete],["👑","Captain's Choice","Choose a captain",!!l.cap],["💰","Budget Boss","Stay under budget",budget()<=100],["🧪","Chemistry Lab","Complete a valid roster",complete&&budget()<=100],["💾","Roster Architect","Save a lineup",Object.keys(d).length>0],["🔄","Preset Pro","Use a preset",hasPreset],["⚔️","Rival Buster","Run a matchup",!!window.__fxRivalPlayed],["🧊","Sleeper Agent","Add a sleeper",!!l.sleeper]];
+    if($("fxAchievements"))$("fxAchievements").innerHTML=items.map(a=>`<div class="fx-achievement ${a[3]?"unlocked":""}"><span>${a[0]}</span><b>${a[1]}</b><small>${a[3]?"UNLOCKED":"LOCKED"} · ${a[2]}</small></div>`).join("");
+  }
+  function scout(){
+    if(!$("fxScoutRadar")||typeof DATA==="undefined")return;
+    $("fxScoutRadar").innerHTML=[["F","FORWARDS"],["D","DEFENSE"],["G","GOALIES"]].map(([k,title])=>`<div class="fx-scout-card"><h5>${title} · TOP PROJECTIONS</h5>${(DATA.P[k]||[]).map(([name,cost])=>({name,cost,pts:projection(name,k)})).sort((a,b)=>b.pts-a.pts).slice(0,4).map(p=>`<div><span>${p.name}<small style="display:block;color:var(--muted)">${p.cost} coins</small></span><b>${p.pts} pts</b></div>`).join("")}</div>`).join("");
+  }
+  function compare(){
+    const box=$("fxPresetComparison");if(!box)return;
+    const title={power:"McDavid Power",balanced:"Balanced Stars",value:"Value Hunters",blueline:"Blue-Line Blast",goalie:"Goalie Wall"};
+    const rows=Object.entries(presets).map(([id,l])=>({id,label:title[id],cost:price(l.F,"F")+price(l.D,"D")+price(l.G,"G"),pts:points(l),cap:l.cap})).sort((a,b)=>b.pts-a.pts);
+    box.hidden=false;box.innerHTML=`<table><thead><tr><th>PRESET</th><th>PRICE</th><th>PROJECTED</th><th>CAPTAIN</th><th></th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.label}</td><td>${r.cost}/100</td><td><b>${r.pts} pts</b></td><td>${r.cap}</td><td><button type="button" data-fx-use="${r.id}">Use</button></td></tr>`).join("")}</tbody></table><p class="fx-note">Projections are estimates for game play.</p>`;
+    box.querySelectorAll("[data-fx-use]").forEach(b=>b.onclick=()=>apply(presets[b.dataset.fxUse],title[b.dataset.fxUse]));
+  }
+  function upgrades(){
+    const box=$("fxUpgradeResults");if(!box||typeof DATA==="undefined")return;const l=lineup(),old=budget(),items=[];
+    ["F","D","G"].forEach(k=>(DATA.P[k]||[]).forEach(([name,cost])=>{
+      if(name===l[k])return;const next=old-price(l[k],k)+cost,delta=projection(name,k)-projection(l[k],k);
+      if(next<=100&&delta>0)items.push({k,name,cost,next,delta,pts:projection(name,k)});
+    }));
+    items.sort((a,b)=>b.delta-a.delta);box.innerHTML=items.length?items.slice(0,8).map(p=>`<div class="fx-result-row"><span><b>${p.name}</b><small>${({F:"Forward",D:"Defense",G:"Goalie"}[p.k])} · roster cost ${p.next}/100</small></span><span>${p.cost} coins</span><b>${p.pts} pts<small>+${p.delta} projected</small></b><button type="button" data-fx-swap="${p.k}" data-fx-player="${p.name.replace(/"/g,"&quot;")}">Swap</button></div>`).join(""):"No affordable higher-projection swaps found.";
+    box.querySelectorAll("[data-fx-swap]").forEach(b=>b.onclick=()=>{const fresh={...l};fresh[b.dataset.fxSwap]=b.dataset.fxPlayer;apply(fresh,"Trade Lab Upgrade")});
+  }
+  function copyText(s){
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(()=>toast("Roster card copied!")).catch(()=>fallback(s))}
+    else fallback(s);
+  }
+  function fallback(s){const ta=document.createElement("textarea");ta.value=s;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast("Roster card copied!")}catch(e){toast("Copy isn't available here.")}ta.remove()}
+  function rosterCard(){const l=lineup();copyText("🏒 NHL FANTASY ROSTER\nForward: "+(l.F||"—")+"\nDefense: "+(l.D||"—")+"\nGoalie: "+(l.G||"—")+"\nCaptain: "+(l.cap||"—")+"\nSleeper: "+(l.sleeper||"—")+"\nBudget: "+budget()+"/100 coins\nProjected points: "+points(l))}
+  function rival(){
+    const l=lineup(),keys=Object.keys(presets),id=keys[rivalSeed%keys.length],opp=presets[id],a=points(l),b=points(opp)+(rivalSeed%3)*4;
+    $("fxRivalScore").innerHTML=`<span>YOU</span><b>${a}</b><em>VS</em><b>${b}</b><span>RIVAL · ${id.toUpperCase()}</span>`;
+    $("fxRivalComment").textContent=a===b?"OVERTIME! It's an even matchup.":a>b?"🏆 WINNER! Your projections beat the rival.":"Rival takes this round. Try the Trade Lab.";
+    window.__fxRivalPlayed=true;achievements();toast(a>=b?"Rival matchup won!":"Rival matchup complete!");
+  }
+
+  // The nav stays hidden on the title splash and appears in the arena. HOME restores the title splash without deleting picks.
+  const intro=$("arenaIntro"),nav=$("arenaUtilityNav"),modal=$("fantasyModal");
+  function navState(){if(nav)nav.style.display=intro&&intro.classList.contains("hide")?"flex":"none"}
+  $("arenaEnter")?.addEventListener("click",()=>setTimeout(navState,10));
+  $("arenaHome")?.addEventListener("click",()=>{modal?.classList.remove("show");intro?.classList.remove("hide");window.scrollTo({top:0,behavior:"smooth"});navState();toast("Back at DROP THE PUCK.")});
+  $("arenaFantasyShortcut")?.addEventListener("click",()=>modal?.classList.add("show"));
+  $("fantasyHome")?.addEventListener("click",()=>{modal?.classList.remove("show");intro?.classList.remove("hide");window.scrollTo({top:0,behavior:"smooth"});navState()});
+  $("fxComparePresets")?.addEventListener("click",compare);$("fxFindUpgrades")?.addEventListener("click",upgrades);$("fxRosterCard")?.addEventListener("click",rosterCard);
+  $("fxSimulateRival")?.addEventListener("click",rival);$("fxNextRival")?.addEventListener("click",()=>{rivalSeed=Math.floor(Math.random()*10000)+1;toast("New rival generated. Ready for a rematch.")});
+  document.querySelectorAll("[data-fx-save]").forEach(b=>b.addEventListener("click",()=>{const d=slotData(),l=lineup();d[b.dataset.fxSave]=l;try{localStorage.setItem(key,JSON.stringify(d));update();toast("Roster saved in Slot "+b.dataset.fxSave)}catch(e){toast("This browser couldn't save the roster.")}}));
+  document.querySelectorAll("[data-fx-load]").forEach(b=>b.addEventListener("click",()=>{const l=slotData()[b.dataset.fxLoad];if(l)apply(l,"Saved Slot "+b.dataset.fxLoad)}));
+  document.addEventListener("click",e=>{if(e.target.closest(".playergrid button")||e.target.closest("#captain button")||e.target.closest("[data-preset]"))setTimeout(update,80)});
+  document.addEventListener("input",()=>setTimeout(update,80));document.addEventListener("change",()=>setTimeout(update,80));
+  update();navState();
+})();
+</script>
+
+
+<style id="playoff-ou-final-skin">
+#eastGrid,#westGrid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;min-height:54px;width:100%;margin:10px 0 16px}
+#eastGrid button,#westGrid button{display:flex!important;align-items:center;justify-content:center;min-height:48px;padding:10px 8px;white-space:normal;line-height:1.2;text-align:center;border:1px solid #29445f;border-radius:12px;background:linear-gradient(145deg,#0d2034,#091625);color:#eaf4ff;font-size:12px;font-weight:850;visibility:visible!important;opacity:1!important}
+#eastGrid button:hover,#westGrid button:hover{border-color:#5cc9ff;transform:translateY(-1px)}
+#eastGrid button.selected,#westGrid button.selected{background:linear-gradient(135deg,#0876a5,#344fc0)!important;border-color:#5dd4ff!important;box-shadow:0 0 0 2px rgba(56,189,248,.18),0 8px 20px rgba(0,0,0,.15)}
+#eastGrid button:focus-visible,#westGrid button:focus-visible,#ou button:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
+#ou{display:grid;gap:12px;margin-top:14px}
+#ou .ou-question{padding:14px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
+#ou .ou-question label{margin:0 0 11px;font-size:14px;line-height:1.4}
+#ou .ou-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+#ou .ou-options button{border:1px solid #29445f;border-radius:11px;min-height:44px;padding:10px 12px;color:#dceafa;background:#0a192a;font-weight:950;letter-spacing:.04em}
+#ou .ou-options button.selected{border-color:#59d9a5;background:linear-gradient(135deg,#075741,#087f73);color:white;box-shadow:0 0 0 2px rgba(52,211,153,.13)}
+#ou .ou-options button:first-child:not(.selected){border-color:rgba(56,189,248,.25)}
+#ou .ou-options button:last-child:not(.selected){border-color:rgba(244,63,94,.22)}
+.ou-progress-line{height:5px;border-radius:20px;background:#12263a;overflow:hidden;margin:10px 0 14px}
+.ou-progress-line i{display:block;height:100%;background:linear-gradient(90deg,#38bdf8,#34d399);width:0;transition:width .25s}
+#arenaUtilityNav{display:flex!important;position:fixed!important;top:14px!important;left:14px!important;z-index:20000!important;gap:8px!important}
+#arenaUtilityNav button{display:inline-flex!important;align-items:center;justify-content:center;min-height:42px;padding:10px 14px!important;background:rgba(5,13,25,.96)!important;color:#f3f9ff!important;border:1px solid rgba(117,197,255,.5)!important;border-radius:13px!important;box-shadow:0 7px 25px rgba(0,0,0,.4)!important}
+#arenaHome{font-size:12px!important;font-weight:1000!important}
+#fantasyModal .fantasy-modal-actions{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(9,21,38,.88),#091526);padding:12px 0 2px;z-index:3}
+@media(max-width:760px){#eastGrid,#westGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:470px){#eastGrid,#westGrid{grid-template-columns:repeat(2,minmax(0,1fr))}#arenaUtilityNav{top:8px!important;left:8px!important}#arenaUtilityNav button{min-height:38px;padding:7px 9px!important;font-size:10px}}
+</style>
+
+
+<script id="playoff-ou-final-repair">
+(function(){
+  const q=id=>document.getElementById(id);
+  const fallbackEast={BOS:"Boston",BUF:"Buffalo",DET:"Detroit",FLA:"Florida",MTL:"Montreal",OTT:"Ottawa",TB:"Tampa Bay",TOR:"Toronto",CAR:"Carolina",CBJ:"Columbus",NJ:"New Jersey",NYI:"NY Islanders",NYR:"NY Rangers",PHI:"Philadelphia",PIT:"Pittsburgh",WSH:"Washington"};
+  const fallbackWest={CHI:"Chicago",COL:"Colorado",DAL:"Dallas",MIN:"Minnesota",NSH:"Nashville",STL:"St. Louis",UTA:"Utah",WPG:"Winnipeg",ANA:"Anaheim",CGY:"Calgary",EDM:"Edmonton",LA:"Los Angeles",SJ:"San Jose",SEA:"Seattle",VAN:"Vancouver",VGK:"Vegas"};
+  const fallbackOU=[
+    "The Oilers finish with 100+ regular-season points",
+    "The Oilers win the Pacific Division",
+    "The Oilers reach the Stanley Cup Final",
+    "An Oilers player scores 50+ goals",
+    "The Utah Mammoth make the Stanley Cup Playoffs",
+    "The Utah Mammoth finish above .500",
+    "The Utah Mammoth win a playoff series",
+    "The Maple Leafs finish with 100+ regular-season points",
+    "The Maple Leafs win the Atlantic Division",
+    "At least two of the Oilers, Mammoth and Maple Leafs reach the Conference Finals"
+  ];
+  function dataFor(key){try{return (typeof DATA!=="undefined"&&DATA[key])||null}catch(e){return null}}
+  function st(){try{
+    if(typeof state==="undefined")return null;
+    if(!Array.isArray(state.E))state.E=[];
+    if(!Array.isArray(state.W))state.W=[];
+    if(!Array.isArray(state.ou)||state.ou.length!==10)state.ou=Array(10).fill("");
+    state.ou=state.ou.map(v=>v==="Yes"||v==="No"?v:"");
+    return state;
+  }catch(e){return null}}
+  function safeSave(){try{if(typeof autoSave==="function")autoSave()}catch(e){}}
+  function safeProgress(){try{if(typeof updateProgress==="function")updateProgress()}catch(e){}}
+  function notify(message){const el=q("fantasyFlashMessage");if(el){el.textContent=message;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2200)}}
+  function renderCounts(s){
+    const e=q("eastCount"),w=q("westCount"),p=q("playoffCount");
+    if(e){e.textContent=s.E.length+" / 6";e.className="counter "+(s.E.length===6?"done":"")}
+    if(w){w.textContent=s.W.length+" / 6";w.className="counter "+(s.W.length===6?"done":"")}
+    if(p)p.textContent=(s.E.length+s.W.length)+" / 12";
+  }
+  function renderField(){
+    const s=st();if(!s)return;
+    const east=dataFor("E")||fallbackEast,west=dataFor("W")||fallbackWest;
+    [["eastGrid",east,"E"],["westGrid",west,"W"]].forEach(([id,conf,key])=>{
+      const box=q(id);if(!box)return;box.innerHTML="";
+      Object.entries(conf).forEach(([code,name])=>{
+        const b=document.createElement("button");b.type="button";b.textContent=name;b.title=code;
+        b.className=s[key].includes(code)?"selected":"";b.setAttribute("aria-pressed",String(s[key].includes(code)));
+        b.addEventListener("click",()=>{
+          const arr=s[key],idx=arr.indexOf(code);
+          if(idx>=0)arr.splice(idx,1);
+          else if(arr.length<6)arr.push(code);
+          else{notify("Choose only six teams in each conference.");return}
+          renderField();safeProgress();safeSave();
+        });
+        box.appendChild(b);
+      });
+    });
+    renderCounts(s);
+  }
+  function renderOverUnder(){
+    const s=st(),box=q("ou");if(!s||!box)return;box.innerHTML="";
+    const questions=(typeof OU!=="undefined"&&Array.isArray(OU)&&OU.length===10)?OU:fallbackOU;
+    const done=s.ou.filter(Boolean).length;
+    const meter=document.createElement("div");meter.className="ou-progress-line";meter.innerHTML="<i></i>";meter.firstElementChild.style.width=(done/questions.length*100)+"%";box.appendChild(meter);
+    const head=document.createElement("div");head.className="muted";head.style.fontSize="12px";head.style.fontWeight="850";head.textContent=done+" / "+questions.length+" answered";box.appendChild(head);
+    questions.forEach((text,index)=>{
+      const item=document.createElement("div");item.className="ou-question";
+      const label=document.createElement("label");label.textContent=(index+1)+". "+text;item.appendChild(label);
+      const choices=document.createElement("div");choices.className="radio2 ou-options";choices.setAttribute("role","group");choices.setAttribute("aria-label",text);
+      ["Yes","No"].forEach(answer=>{
+        const b=document.createElement("button");b.type="button";b.textContent=answer==="Yes"?"✓ YES":"✕ NO";
+        b.className=s.ou[index]===answer?"selected":"";b.setAttribute("aria-pressed",String(s.ou[index]===answer));
+        b.addEventListener("click",()=>{s.ou[index]=answer;renderOverUnder();safeProgress();safeSave()});
+        choices.appendChild(b);
+      });
+      item.appendChild(choices);box.appendChild(item);
+    });
+  }
+  function refresh(){
+    const s=st();if(!s)return;
+    // First try the app's own functions; then repaint to guarantee actual buttons.
+    try{if(typeof populateSelects==="function")populateSelects()}catch(e){}
+    try{if(typeof renderTeams==="function")renderTeams()}catch(e){}
+    try{if(typeof renderOU==="function")renderOU()}catch(e){}
+    renderField();renderOverUnder();
+    safeProgress();
+  }
+
+  // Fix Home: always visible inside the arena; Home in Fantasy returns to the title splash.
+  const intro=q("arenaIntro"),nav=q("arenaUtilityNav"),modal=q("fantasyModal");
+  function navState(){
+    if(!nav)return;
+    const inArena=intro&&intro.classList.contains("hide");
+    nav.style.display=inArena?"flex":"none";
+    nav.style.visibility=inArena?"visible":"hidden";
+    nav.style.opacity=inArena?"1":"0";
+    nav.style.pointerEvents=inArena?"auto":"none";
+  }
+  q("arenaEnter")?.addEventListener("click",()=>setTimeout(navState,50));
+  q("arenaHome")?.addEventListener("click",()=>{
+    if(modal){modal.classList.remove("show");modal.setAttribute("aria-hidden","true")}
+    if(intro)intro.classList.remove("hide");
+    window.scrollTo({top:0,behavior:"smooth"});navState();
+  });
+  q("arenaFantasyShortcut")?.addEventListener("click",()=>{
+    if(modal){modal.classList.add("show");modal.setAttribute("aria-hidden","false")}
+  });
+  q("fantasyHome")?.addEventListener("click",()=>{
+    if(modal){modal.classList.remove("show");modal.setAttribute("aria-hidden","true")}
+    if(intro)intro.classList.remove("hide");
+    window.scrollTo({top:0,behavior:"smooth"});navState();
+  });
+  q("fantasyDone")?.addEventListener("click",()=>{if(modal){modal.classList.remove("show");modal.setAttribute("aria-hidden","true")}navState()});
+  if(intro&&typeof MutationObserver!=="undefined")new MutationObserver(navState).observe(intro,{attributes:true,attributeFilter:["class"]});
+  document.addEventListener("DOMContentLoaded",refresh);
+  refresh();navState();
+  // Re-run once after the app's other boot scripts have finished.
+  setTimeout(()=>{refresh();navState()},250);
+})();
+</script>
+
+
+<style id="final-edition-access-and-tracker-skin">
+/* Private entry screen */
+.private-access-gate{position:fixed;inset:0;z-index:1000000;display:grid;place-items:center;padding:22px;background:radial-gradient(circle at 50% 15%,rgba(56,189,248,.22),transparent 30rem),linear-gradient(145deg,#030814,#07182b 58%,#100e20);color:#f5f8fc;overflow:auto}
+.private-access-card{width:min(100%,480px);border:1px solid rgba(111,190,255,.35);border-radius:28px;padding:clamp(23px,5vw,40px);background:linear-gradient(155deg,rgba(16,36,59,.98),rgba(5,13,25,.98));box-shadow:0 28px 100px rgba(0,0,0,.52),0 0 50px rgba(56,189,248,.1);text-align:center}
+.private-access-logo{height:62px;width:62px;display:grid;place-items:center;margin:0 auto 17px;border:1px solid rgba(100,190,255,.45);border-radius:19px;background:linear-gradient(145deg,#1687b9,#273b9d);font-size:30px;box-shadow:0 12px 30px rgba(56,189,248,.2)}
+.private-access-card h1{font-size:clamp(2.6rem,11vw,4.3rem);letter-spacing:-.055em;margin:14px 0 10px;background:linear-gradient(90deg,#fff,#8fd0ff,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.private-access-card p{color:#b4c4d7;margin:0 0 21px}.private-access-card label{text-align:left;margin:0 0 7px;color:#eaf4ff}.private-access-card input{font-size:1.1rem;letter-spacing:.1em;text-align:center;border-color:#365879;background:#061322}.private-access-submit{width:100%;margin-top:13px;min-height:50px;border:1px solid rgba(115,202,255,.55);border-radius:13px;background:linear-gradient(100deg,#1685b8,#3158cf);color:white;font-weight:950;letter-spacing:.04em;box-shadow:0 10px 25px rgba(39,117,220,.2)}
+.private-access-message{min-height:23px;margin-top:13px;color:#9fb3cb;font-size:.84rem}.private-access-message.error{color:#fb7185}.private-access-message.success{color:#55e6a5}.private-access-foot{font-size:.75rem;color:#8298b2;margin-top:16px}.private-access-gate.unlocking{animation:privateGateOut .35s ease forwards}@keyframes privateGateOut{to{opacity:0;visibility:hidden;transform:scale(1.02)}}
+/* Fantasy score tracker */
+.fx-tracker-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.fx-tracker-heading h4{margin:0;font-size:1.05rem}.fx-tracker-heading small{display:block;color:#9db0c8;margin-top:4px}.fx-tracker-live{flex:none;padding:5px 8px;border:1px solid rgba(85,230,165,.3);border-radius:999px;background:rgba(85,230,165,.08);color:#8af0bd;font-size:.65rem;font-weight:950;letter-spacing:.07em}.fx-tracker-lineup{margin:14px 0;padding:10px 12px;border:1px solid rgba(105,183,255,.2);border-radius:11px;background:rgba(105,183,255,.06);font-size:.85rem;color:#dcecff}.fx-tracker-stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.fx-tracker-stat{min-width:0;padding:13px;border:1px solid rgba(105,183,255,.17);border-radius:14px;background:rgba(2,10,20,.38)}.fx-tracker-stat>b{display:block;font-size:.75rem;letter-spacing:.055em}.fx-tracker-stat>small{display:block;min-height:36px;color:#9eb5cd;font-size:.75rem;margin:5px 0 8px;overflow-wrap:anywhere}.fx-tracker-stat label{font-size:.75rem;margin:8px 0 4px;color:#b6c8dc}.fx-tracker-stat input{padding:8px 9px;border-radius:9px;font-size:.95rem}.fx-tracker-actions{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}.fx-tracker-actions button{border:1px solid rgba(105,183,255,.25);border-radius:10px;background:#12283f;color:#eef7ff;padding:10px 12px;font-size:.78rem;font-weight:900}.fx-tracker-actions #fxTrackerLog{background:linear-gradient(100deg,#0878a7,#2957bb);border-color:#58c6ff}.fx-tracker-actions #fxTrackerReset{border-color:rgba(255,93,115,.32);color:#ffb4bf}.fx-tracker-actions button:disabled{opacity:.4;cursor:not-allowed}.fx-tracker-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.fx-tracker-summary>div{padding:12px;border:1px solid rgba(105,183,255,.17);border-radius:12px;background:rgba(2,10,20,.45)}.fx-tracker-summary small{display:block;color:#8faac4;font-size:.64rem;font-weight:900;letter-spacing:.04em}.fx-tracker-summary strong{display:block;color:#fff;font-size:clamp(1.2rem,4vw,1.7rem);margin-top:4px;overflow-wrap:anywhere}.fx-tracker-summary>div:first-child strong{color:#7eeab7}.fx-tracker-log-head{display:flex;justify-content:space-between;gap:8px;margin:17px 0 7px;font-size:.75rem;letter-spacing:.05em}.fx-tracker-log-head span{color:#819ab4;letter-spacing:0}.fx-tracker-log{display:grid;gap:7px}.fx-tracker-log-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid rgba(105,183,255,.14);border-radius:10px;background:rgba(2,10,20,.3)}.fx-tracker-log-row small{display:block;color:#8faac4;font-size:.72rem}.fx-tracker-log-row b{white-space:nowrap;color:#7eeab7}.fx-tracker-empty{padding:13px;border:1px dashed rgba(105,183,255,.24);border-radius:11px;color:#8faac4;font-size:.84rem}.fx-tracker-foot{font-size:.72rem;color:#819ab4;margin-top:12px;line-height:1.45}
+@media(max-width:650px){.fx-tracker-stats-grid{grid-template-columns:1fr}.fx-tracker-stat>small{min-height:0}.fx-tracker-actions button{flex:1 1 145px}.fx-tracker-summary{grid-template-columns:1fr 1fr}.fx-tracker-summary>div:first-child{grid-column:1/-1}.private-access-card{padding:25px 20px}}
+</style>
+
+<script id="final-edition-access-and-fantasy-tracker">
+(function(){
+  // Casual invite-code gate for a standalone HTML file, not server-grade authentication.
+  const ACCESS_CODE = "RINK-27-7391";
+  const gate = document.getElementById("privateAccessGate");
+  const form = document.getElementById("privateAccessForm");
+  const input = document.getElementById("privateAccessCode");
+  const message = document.getElementById("privateAccessMessage");
+  if (form && gate && input && message) {
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+      const entered = String(input.value || "").toUpperCase().replace(/[\s-]/g, "");
+      const expected = ACCESS_CODE.toUpperCase().replace(/[\s-]/g, "");
+      if (entered !== expected) {
+        message.textContent = "That code did not match. Ask the league organizer for the invite code.";
+        message.className = "private-access-message error";
+        input.select();
+        return;
+      }
+      message.textContent = "Access granted. Welcome to the locker room!";
+      message.className = "private-access-message success";
+      const submit = form.querySelector("button[type=submit]"); if(submit) submit.disabled = true;
+      gate.classList.add("unlocking");
+      setTimeout(function(){gate.remove();document.getElementById("arenaIntro")?.classList.remove("hide");}, 360);
+    });
+  }
+
+  const trackerKey = "nhl_fantasy_score_tracker_2026_27";
+  const byId = id => document.getElementById(id);
+  const safeName = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  function readEntries(){try{const v=JSON.parse(localStorage.getItem(trackerKey)||"[]");return Array.isArray(v)?v:[]}catch(e){return []}}
+  function saveEntries(entries){try{localStorage.setItem(trackerKey,JSON.stringify(entries));return true}catch(e){trackerToast("Your browser blocked local saving.");return false}}
+  function currentLineup(){
+    const picks={F:typeof getPick==="function"?getPick("F"):"",D:typeof getPick==="function"?getPick("D"):"",G:typeof getPick==="function"?getPick("G"):""};
+    const captain=(typeof state!=="undefined"&&state.cap)||"";
+    return {picks,captain};
+  }
+  function number(id){const el=byId(id);const n=el?Number(el.value):0;return Number.isFinite(n)?Math.max(0,Math.min(999,Math.floor(n))):0}
+  function trackerToast(text){const el=byId("fantasyFlashMessage");if(el){el.textContent=text;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2500)}}
+  function lineupText(p){return "F: "+(p.F||"—")+" · D: "+(p.D||"—")+" · G: "+(p.G||"—")}
+  function renderTracker(){
+    const totalEl=byId("fxTrackerTotal");if(!totalEl)return;
+    const entries=readEntries(),total=entries.reduce((n,e)=>n+(Number(e.points)||0),0),latest=entries[entries.length-1];
+    const l=currentLineup();
+    byId("fxTrackerFName").textContent=l.picks.F||"No forward selected";
+    byId("fxTrackerDName").textContent=l.picks.D||"No defenseman selected";
+    byId("fxTrackerGName").textContent=l.picks.G||"No goalie selected";
+    byId("fxTrackerLineup").textContent=lineupText(l.picks)+" · Captain: "+({F:"Forward",D:"Defenseman",G:"Goalie"}[l.captain]||"not chosen");
+    totalEl.textContent=total.toFixed(1);byId("fxTrackerEntries").textContent=String(entries.length);byId("fxTrackerLatest").textContent=latest?(Number(latest.points)||0).toFixed(1)+" pts":"—";
+    byId("fxTrackerUndo").disabled=!entries.length;
+    const list=byId("fxTrackerLogList");
+    if(!entries.length){list.innerHTML='<div class="fx-tracker-empty">No scoring updates yet. Log your first set of stats above.</div>';return}
+    list.innerHTML=entries.slice(-8).reverse().map(e=>{const date=new Date(e.time);const when=Number.isNaN(date.getTime())?"Saved update":date.toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"});return '<div class="fx-tracker-log-row"><div><b>'+safeName(e.note||"Scoring update")+'</b><small>'+safeName(when)+" · "+safeName(e.lineup||"")+" · "+safeName(e.detail||"")+'</small></div><b>+'+(Number(e.points)||0).toFixed(1)+' pts</b></div>'}).join("");
+  }
+  function logUpdate(){
+    const l=currentLineup();
+    if(!l.picks.F||!l.picks.D||!l.picks.G||!l.captain){trackerToast("Finish your Fantasy trio and select a captain first.");return}
+    const v={fg:number("fxTrackerFG"),fa:number("fxTrackerFA"),dg:number("fxTrackerDG"),da:number("fxTrackerDA"),gw:number("fxTrackerGW"),gso:number("fxTrackerGSO"),gs:number("fxTrackerGS")};
+    if(!Object.values(v).some(n=>n>0)){trackerToast("Enter at least one stat before logging an update.");return}
+    const raw={F:v.fg*3+v.fa*2,D:v.dg*3+v.da*2,G:v.gw*5+v.gso*3+v.gs*.2};
+    const score=raw.F*(l.captain==="F"?2:1)+raw.D*(l.captain==="D"?2:1)+raw.G*(l.captain==="G"?2:1);
+    const detail="F "+raw.F.toFixed(1)+" · D "+raw.D.toFixed(1)+" · G "+raw.G.toFixed(1)+(l.captain?" · "+({F:"F",D:"D",G:"G"}[l.captain])+" captain 2×":"");
+    const entries=readEntries();entries.push({time:Date.now(),points:Math.round(score*10)/10,lineup:lineupText(l.picks),detail,note:"Fantasy scoring update"});
+    if(!saveEntries(entries))return;
+    ["fxTrackerFG","fxTrackerFA","fxTrackerDG","fxTrackerDA","fxTrackerGW","fxTrackerGSO","fxTrackerGS"].forEach(id=>{if(byId(id))byId(id).value="0"});
+    renderTracker();trackerToast("Logged +"+(Math.round(score*10)/10).toFixed(1)+" fantasy points!");
+  }
+  byId("fxTrackerLog")?.addEventListener("click",logUpdate);
+  byId("fxTrackerUndo")?.addEventListener("click",function(){const entries=readEntries();if(!entries.length)return;entries.pop();saveEntries(entries);renderTracker();trackerToast("Last scoring update undone.")});
+  byId("fxTrackerReset")?.addEventListener("click",function(){if(!readEntries().length){trackerToast("The tracker is already empty.");return}if(!confirm("Reset the Fantasy Score Tracker history on this device? This cannot be undone."))return;saveEntries([]);renderTracker();trackerToast("Fantasy tracker reset.")});
+  document.querySelectorAll("[data-preset], [data-fx-use], [data-fx-load], #fantasyAutoDraft, #fantasyStarterReset, #fantasyRandom").forEach(el=>el.addEventListener("click",()=>setTimeout(renderTracker,80)));
+  ["customF","customD","customG","sleeper"].forEach(id=>byId(id)?.addEventListener("input",()=>setTimeout(renderTracker,80)));
+  renderTracker();
+})();
+</script>
+
+</body>
+</html>
